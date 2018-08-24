@@ -1,0 +1,179 @@
+{% extends 'layout_main.html' %} {% block topbar %}
+<header class="s-header mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="menu material-icons mdc-top-app-bar__navigation-icon">
+                menu
+            </button>
+            <span class="mdc-top-app-bar__title">Ciudad Mujer</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+            <div class="mdc-menu-anchor">
+
+                <button id="shareButton" class="material-icons mdc-top-app-bar__action-item" aria-label="Share" alt="Share">
+                    share
+                </button>
+                <!--                 
+                <button id="shareButton" class="mdc-button topAppBar-button" aria-label="Share" alt="Share">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">share</i>
+                    Compartir
+                </button>
+                 -->
+                <div id="shareMenu" class="mdc-menu" tabindex="-1">
+                    <ul class="mdc-list mdc-menu__items" role="menu" aria-hidden="true">
+                        <li class="mdc-list-item" role="menuitem" tabindex="0">
+                            <i class="classic-color-em material-icons mdc-list-item__graphic" aria-hidden="true">email</i>
+                            Email
+                        </li>
+                        <li class="mdc-list-item" role="menuitem" tabindex="0">
+                            <i class="classic-color-fb mdc-list-item__graphic fa fa-facebook" aria-hidden="true"></i>
+                            Facebook
+                        </li>
+                        <li class="mdc-list-item" role="menuitem" tabindex="0">
+                            <i class="classic-color-gp mdc-list-item__graphic fa fa-google-plus" aria-hidden="true"></i>
+                            Google+
+                        </li>
+                        <li class="mdc-list-item" role="menuitem" tabindex="0">
+                            <i class="classic-color-li mdc-list-item__graphic fa fa-linkedin" aria-hidden="true"></i>
+                            LinkedIn
+                        </li>
+                        <li class="mdc-list-item" role="menuitem" tabindex="0">
+                            <i class="classic-color-tw mdc-list-item__graphic fa fa-twitter" aria-hidden="true"></i>
+                            Twitter
+                        </li>
+                        <li class="mdc-list-item" role="menuitem" tabindex="0">
+                            <i class="classic-color-wa mdc-list-item__graphic fa fa-whatsapp" aria-hidden="true"></i>
+                            WhatsApp
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button id="loginButton" class="mdc-button mdc-button--outlined topAppBar-button" aria-label="Login" alt="Login">
+                Login
+            </button>
+        </section>
+    </div>
+</header>
+<aside class="s-nav mdc-drawer mdc-drawer--temporary">
+    <nav class="mdc-drawer__drawer">
+        <!-- 
+        <header class="mdc-drawer__header">
+            <div class="mdc-drawer__header-content">
+            </div>
+        </header>
+        -->
+        <img id="logo-nav-drawer" src="../static/images/manifest/logocmh_sin_texto.svg" alt="Logo Ciudad Mujer Honduras" />
+        <nav class="mdc-drawer__content mdc-list">
+            <a class="mdc-list-item" href="/">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>Inicio
+            </a>
+            <a class="mdc-list-item" href="/servicios">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">view_list</i>Servicios
+            </a>
+            <a class="mdc-list-item" href="#">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">map</i>Ubicaciones
+            </a>
+            <a class="mdc-list-item" href="#">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">pages</i>Noticias
+            </a>
+            <a class="mdc-list-item" href="#">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">face</i>Mi Ciudad Mujer
+            </a>
+            <a class="mdc-list-item" href="#">
+                <i class="mdc-list-item__graphic fa fa-whatsapp" aria-hidden="true"></i>Centro de Atención WhatsApp
+            </a>
+            <a class="mdc-list-item" href="#">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">question_answer</i>Preguntas Frecuentes
+            </a>
+            <a class="mdc-list-item" href="#">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">info</i>Acerda de...
+            </a>
+        </nav>
+    </nav>
+</aside>
+{% endblock %} {% block bottombar %}{% endblock %} {% block footer %}
+<section class="parallax-div parallax-div--light">
+    <h2>
+        ¡Solo faltas tu!
+    </h2>
+    <img id="logo-landing-page__bottom" src="../static/images/manifest/logocmh_solo_texto.png" alt="Logo Ciudad Mujer Honduras">
+</section>
+<button id="floatingButton" class="mdc-fab fab--absolute fab__whatsapp" aria-label="WhatsApp Contact Center">
+    <span class="mdc-fab__icon fa fa-whatsapp"></span>
+</button>
+<footer class="s-footer">
+    <section class="footer-about">
+        <div class="footer-section__title">
+            Ciudad Mujer
+        </div>
+        <div class="footer-about__text">
+            Un nuevo eslabón que consolida y fortalece la política de estado hacia el desarrollo de la mujer Hondureña que ofrece servicios
+            de atención integral bajo un mismo techo para contribuir al mejoramiento de sus condiciones de vida.
+        </div>
+        <span class="footer-about__author">
+            Gobierno de la República de Honduras
+        </span>
+    </section>
+    <section class="footer-followus">
+        <div class="footer-section__title">
+            Sigue conectado con nostros
+        </div>
+        <div class="footer-followus__list">
+            <ul class="mdc-list" aria-orientation="vertical" aria-hidden="true">
+                <li class="mdc-list-item">
+                    <a href="https://www.facebook.com/swing_cms/" target="_blank" rel="external">
+                        <i class="mdc-list-item__graphic fa fa-facebook" aria-hidden="true"></i>
+                        Facebook
+                    </a>
+                </li>
+                <li class="mdc-list-item">
+                    <a href="https://www.linkedin.com/in/swing_cms/" target="_blank" rel="external">
+                        <i class="mdc-list-item__graphic fa fa-linkedin" aria-hidden="true"></i>
+                        LinkedIn
+                    </a>
+                </li>
+                <li class="mdc-list-item">
+                    <a href="https://twitter.com/swing_cms" target="_blank" rel="external">
+                        <i class="mdc-list-item__graphic fa fa-twitter" aria-hidden="true"></i>
+                        Twitter
+                    </a>
+                </li>
+                <li class="mdc-list-item">
+                    <a href="https://wa.me/55578984565" target="_blank" rel="external">
+                        <i class="mdc-list-item__graphic fa fa-whatsapp" aria-hidden="true"></i>
+                        WhatsApp
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="footer-contactus">
+        <div class="footer-section__title">
+            Contáctenos
+        </div>
+        <div class="footer-contactus__list">
+            <ul class="mdc-list" aria-orientation="vertical" aria-hidden="true">
+                <li class="mdc-list-item">
+                    <a href="https://goo.gl/maps/LDXEiGHuic32" target="_blank" rel="external">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">map</i>
+                        Encuéntranos en Google Maps
+                    </a>
+                </li>
+                <li class="mdc-list-item">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">phone</i>
+                    +504 2239 8911 || +504 2239 8957
+                </li>
+                <li class="mdc-list-item">
+                    <a href="mailto:info@ciudadmujer.gob.hn" target="_blank" rel="external">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">email</i>
+                        info@ciudadmujer.gob.hn
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="footer-copyright">
+        Mi Ciudad Mujer. Ciudad Mujer Honduras. Derechos reservados | Diseñado por RXDBit
+    </section>
+</footer>
+{% endblock %}
