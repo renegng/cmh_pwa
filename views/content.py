@@ -6,6 +6,10 @@ content = Blueprint('content', __name__, template_folder='templates', static_fol
 def _article():
     return render_template('article.html')
 
+@content.route('/direcciones')
+def _direcciones():
+    return render_template('direcciones.html')
+
 @content.route('/servicios')
 def _servicios():
     return render_template('servicios.html')
