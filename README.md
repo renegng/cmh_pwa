@@ -1,5 +1,5 @@
-# Swing CMS
-A Flask (Python) based CMS that allows people to Swing easily over WEBsite development.
+# Swing CMS - Ciudad Mujer Honduras
+Ciudad Mujer Honduras, Progressive Web App
 
 -RXDBit
 
