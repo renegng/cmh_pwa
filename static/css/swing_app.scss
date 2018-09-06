@@ -292,11 +292,18 @@ body {
 }
 
 // Navigation Bar
-.topAppBar-button{
+.topAppBar-button {
   @include mdc-button-container-fill-color(on-primary);
   @include mdc-button-ink-color(primary);
   @include mdc-button-outline-color(on-surface);
   @include mdc-states(on-primary);
+}
+
+.topAppBar-title {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 // Body Content Style

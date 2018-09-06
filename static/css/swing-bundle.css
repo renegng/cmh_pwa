@@ -3486,6 +3486,10 @@ body {
 .topAppBar-button.mdc-ripple-upgraded {
   --mdc-ripple-fg-opacity: 0.32; }
 
+.topAppBar-title a {
+  color: inherit;
+  text-decoration: none; }
+
 .s-mdc-card {
   display: flex;
   flex-wrap: wrap;
