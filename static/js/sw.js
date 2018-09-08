@@ -3,22 +3,30 @@
 // It has been configured, through swing_main.py to make it look like it is.
 
 const filesToCache = [
+    // Web pages
     '/',
+    '/direcciones',
+    '/servicios',
+    // Images
+    '/static/images/manifest/logocmh_con_texto.svg',
+    '/static/images/manifest/logocmh_sin_texto.svg',
     '/static/images/assets/ciudadmujer/cmh_02_bg.jpg',
     '/static/images/assets/ciudadmujer/cmh_06_bg.jpg',
     '/static/images/assets/ciudadmujer/cmh_13_bg.jpg',
     '/static/images/assets/ciudadmujer/cmh_14_bg.jpg',
-    '/static/images/assets/ciudadmujer/cmh_15_bg.jpg'
+    '/static/images/assets/ciudadmujer/cmh_15_bg.jpg',
+    // Media
+    '/static/media/audio/cmh_jingle.mp3'
 ];
 
-const staticCacheName = 'generalCache-v1';
+const genCacheName = 'generalCache-v1';
 
 // Install Event
 self.addEventListener('install', event => {
     console.log('Service Worker Installed! Attempting to cache static assets');
     // Saving into cache for offline usage
     event.waitUntil(
-        caches.open(staticCacheName)
+        caches.open(genCacheName)
             .then(cache => {
                 console.log('Saving assets into cache...');
                 cache.addAll(filesToCache);
@@ -30,7 +38,7 @@ self.addEventListener('install', event => {
 // Activate Event
 self.addEventListener('activate', event => {
     console.log('Service Worker Activated!');
-    var cacheWhitelist = [''];
+    var cacheWhitelist = ['generalCache-v1'];
     // Remove unwanted caches
     event.waitUntil(
         caches.keys().then(cacheNames => {
@@ -66,7 +74,7 @@ self.addEventListener('fetch', event => {
                     // We clone the response, since is consumable only once and because we
                     // want to store it in the cache and also send it to the browser
                     var response2Cache = response.clone();
-                    caches.open(staticCacheName).then(cache => {
+                    caches.open(genCacheName).then(cache => {
                         cache.put(event.request, response2Cache)
                     });
 
@@ -76,6 +84,7 @@ self.addEventListener('fetch', event => {
     );
 });
 
+// Push Messages
 self.addEventListener('push', event => {
     var title = 'Yay a message.';
     var body = 'We have received a push message.';

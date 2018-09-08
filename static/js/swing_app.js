@@ -3,6 +3,7 @@ import { MDCIconToggle } from '@material/icon-toggle';
 import { MDCMenu, Corner } from '@material/menu';
 import { MDCPersistentDrawer, MDCPersistentDrawerFoundation, MDCPermanentDrawer, MDCPermanentDrawerFoundation, MDCTemporaryDrawer, MDCTemporaryDrawerFoundation, util } from '@material/drawer';
 import { MDCRipple } from '@material/ripple';
+import { MDCSnackbar, MDCSnackbarFoundation } from '@material/snackbar';
 import { MDCTopAppBar } from '@material/top-app-bar/index';
 import { isNull } from 'util';
 
@@ -69,6 +70,9 @@ if (!isNull(document.querySelector('#floatingButton'))) {
     floatingButtonRipple = new MDCRipple(document.querySelector('#floatingButton'));
 }
 
+// Material Snackbar
+const snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'));
+
 // Material Top-app-bar
 var topAppBar = null;
 if (!isNull(document.querySelector('.mdc-top-app-bar'))) {
@@ -134,14 +138,14 @@ function playAudio(detail) {
         audio.pause();
     }
 
-    audio.onended = function () { playAudioButton.click() };
+    audio.onended = () => { playAudioButton.click() };
 }
 
 // Landing Page Image Carousel
 var landPageImgCarCont = null;
 if (!isNull(document.querySelector('#landing-img-carousel'))) {
     landPageImgCarCont = document.querySelector('#landing-img-carousel');
-    setInterval(function () {
+    setInterval(() => {
         landingPageImgCarousel(landPageImgCarCont);
     }, 7500);
 }
@@ -178,3 +182,47 @@ if ('serviceWorker' in navigator) {
             console.log('Service Worker Registration Failed with ' + error);
         });
 }
+
+
+// Add to Homescreen (A2H) Event
+var deferredPrompt;
+var appIsInstalled = false;
+
+var installSBDataObj = {
+    message: '¿Deseas Instalar la App?',
+    actionText: 'Si',
+    timeout: 20000,
+    actionHandler: () => {
+        console.log('Installing app (A2H)...');
+        // Show the prompt
+        deferredPrompt.prompt();
+        // Wait for the user action
+        deferredPrompt.userChoice
+            .then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('User accepted the A2H prompt');
+                    appIsInstalled = true;
+                } else {
+                    console.log('User dismissed the A2H prompt');
+                }
+                deferredPrompt = null;
+            });
+    }
+};
+
+window.addEventListener('appinstalled', (evt) => {
+    console.log('App is installed...');
+    appIsInstalled = true;
+});
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    console.log('Prompting to install app...');
+    // Prevent Chrome 67 and earlier from automatically showing the prompt
+    e.preventDefault();
+    // Stash the event so it can be triggered later.
+    deferredPrompt = e;
+    // Show the Snackbar popup to Install
+    if (!appIsInstalled) {
+        snackbar.show(installSBDataObj);
+    }
+});

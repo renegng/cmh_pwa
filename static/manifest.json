@@ -1,7 +1,7 @@
 {
-    "name": "Swing CMS",
-    "short_name": "Swing",
-    "description": "Swing CMS App",
+    "name": "Ciudad Mujer",
+    "short_name": "CM",
+    "description": "Ciudad Mujer App",
     "start_url": "/",
     "display": "standalone",
     "theme_color": "#743a87",

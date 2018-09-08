@@ -33,6 +33,7 @@ $mdc-theme-on-background: #c96b0f;
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@material/list/mdc-list";
 @import "@material/menu/mdc-menu";
+@import "@material/snackbar/mdc-snackbar";
 @import "@material/toolbar/mdc-toolbar";
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/typography/mdc-typography";
@@ -431,8 +432,15 @@ body {
       padding: 0.25rem;
     }
     #logo-landing-page__top {
+      top: 0;
+      height: 80%;
+      position: absolute;
       filter: drop-shadow(0.06rem 0.06rem 0.12rem);
-      height: 100%;
+    }
+
+    #logo-landing-page__top-text {
+      bottom: 0;
+      position: absolute;
     }
   }
 }
@@ -460,8 +468,15 @@ body {
       padding: 0.25rem;
     }
     #logo-landing-page__top {
+      top: 0;
+      height: 80%;
+      position: absolute;
       filter: drop-shadow(0.06rem 0.06rem 0.12rem);
-      height: 100%;
+    }
+
+    #logo-landing-page__top-text {
+      bottom: 0;
+      position: absolute;
     }
   }
 }
@@ -489,10 +504,15 @@ body {
       padding: 0.25rem;
     }
     #logo-landing-page__top {
+      top: 0;
+      height: 75%;
+      position: absolute;
       filter: drop-shadow(0.06rem 0.06rem 0.12rem);
-      max-width: 100%;
-      width: auto\9;
-      height: 100%;
+    }
+
+    #logo-landing-page__top-text {
+      bottom: 0;
+      position: absolute;
     }
   }
 }
