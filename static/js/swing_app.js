@@ -14,7 +14,7 @@ var playAudioButton = null;
 if (!isNull(document.querySelector('.fab__playbutton'))) {
     playAudioButton = document.querySelector('.fab__playbutton');
     MDCIconToggle.attachTo(playAudioButton);
-    playAudioButton.addEventListener('MDCIconToggle:change', ({detail}) => playAudio(detail));
+    playAudioButton.addEventListener('MDCIconToggle:change', ({ detail }) => playAudio(detail));
 }
 
 // Material Drawer
@@ -26,17 +26,17 @@ if (!isNull(document.querySelector('.mdc-drawer--persistent'))) {
 } else if (!isNull(document.querySelector('.mdc-drawer--permanent'))) {
     drawer = new MDCPermanentDrawer(document.querySelector('.mdc-drawer--permanent'));
 }
-if (drawer != null){
+if (drawer != null) {
     document.querySelector('.menu').addEventListener('click', () => (drawer.open ? drawer.open = false : drawer.open = true));
-    
+
     // Setting a drawer menu item as activated
     var menuURL = null;
     var myURL = location.pathname;
 
     var drawerItems = document.querySelector('.mdc-drawer__content');
-    Array.from(drawerItems.children).forEach((child, index) =>{
+    Array.from(drawerItems.children).forEach((child, index) => {
         menuURL = child.getAttribute('href');
-        if (menuURL != null && menuURL == myURL){
+        if (menuURL != null && menuURL == myURL) {
             child.classList.add("mdc-list-item--activated");
         }
     });
@@ -45,11 +45,11 @@ if (drawer != null){
 // Material Menu
 var shareMenu = null;
 var shareMenuButton = null;
-if (!isNull(document.querySelector('#shareMenu'))){
-   shareMenu = new MDCMenu(document.querySelector('#shareMenu'));
-   shareMenuButton = document.querySelector('#shareButton');
+if (!isNull(document.querySelector('#shareMenu'))) {
+    shareMenu = new MDCMenu(document.querySelector('#shareMenu'));
+    shareMenuButton = document.querySelector('#shareButton');
 }
-if (shareMenuButton != null){
+if (shareMenuButton != null) {
     shareMenuButton.addEventListener('click', () => (shareMenu.open = !shareMenu.open));
     shareMenu.setAnchorCorner(Corner.BOTTOM_START);
     document.querySelector('#shareMenu').addEventListener('MDCMenu:selected', evt => shareRedirect(evt));
@@ -95,17 +95,17 @@ function shareRedirect(e) {
 
     var shareTitle = document.title;
     shareTitle = encodeURIComponent(shareTitle);
-    
+
     // Open a new window to share the content
     var shareAppName = e.detail.item.lastChild.textContent;
     shareAppName = shareAppName.toLowerCase().trim();
 
-    switch (shareAppName){
+    switch (shareAppName) {
         case 'email':
-            window.open(emailShareUrl +  shareTitle + " - " + shareMyURL + "&subject=" + shareText + " - " + shareTitle);
+            window.open(emailShareUrl + shareTitle + " - " + shareMyURL + "&subject=" + shareText + " - " + shareTitle);
             break;
         case 'facebook':
-            window.open(facebookShareUrl +  shareMyURL);
+            window.open(facebookShareUrl + shareMyURL);
             break;
         case 'google+':
             window.open(googlePlusShareURL + shareMyURL);
@@ -125,14 +125,56 @@ function shareRedirect(e) {
 }
 
 // Audio playback
-function playAudio(detail){
+function playAudio(detail) {
     var audio = document.getElementById('cmh-jingle');
 
-    if (detail.isOn){
+    if (detail.isOn) {
         audio.play();
-    }else{
+    } else {
         audio.pause();
     }
 
-    audio.onended = function(){playAudioButton.click()};
+    audio.onended = function () { playAudioButton.click() };
+}
+
+// Landing Page Image Carousel
+var landPageImgCarCont = null;
+if (!isNull(document.querySelector('#landing-img-carousel'))) {
+    landPageImgCarCont = document.querySelector('#landing-img-carousel');
+    setInterval(function () {
+        landingPageImgCarousel(landPageImgCarCont);
+    }, 7500);
+}
+
+var lpic = 1;
+function landingPageImgCarousel(container) {
+    var backgroundImgs = [
+        "../static/images/assets/ciudadmujer/cmh_02_bg.jpg",
+        "../static/images/assets/ciudadmujer/cmh_06_bg.jpg",
+        "../static/images/assets/ciudadmujer/cmh_13_bg.jpg",
+        "../static/images/assets/ciudadmujer/cmh_14_bg.jpg",
+        "../static/images/assets/ciudadmujer/cmh_15_bg.jpg",
+    ];
+    container.classList.remove('img-transition-fadein');
+    // Forces re-orientation of the container, which forces re-animation
+    void container.offsetWidth;
+
+    container.style.backgroundImage = 'url("' + backgroundImgs[Math.floor(lpic % backgroundImgs.length)] + '")';
+    container.classList.add('img-transition-fadein');
+    lpic++;
+}
+
+// Registering the service worker for the pwa
+// NOTE
+// Even though this service worker is not on the root of this web application
+// It has been configured, through swing_main.py to make it look like it is.
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js', { scope: '/' })
+        .then(reg => {
+            // registration worked
+            console.log('Service Worker Registered. Scope is ' + reg.scope);
+        }).catch(error => {
+            // registration failed
+            console.log('Service Worker Registration Failed with ' + error);
+        });
 }

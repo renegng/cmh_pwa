@@ -4,8 +4,8 @@
     "description": "Swing CMS App",
     "start_url": "/",
     "display": "standalone",
-    "theme_color": "#3f51b5",
-    "background_color": "#3f51b5",
+    "theme_color": "#743a87",
+    "background_color": "#743a87",
     "icons": [
         {
             "src": "images/manifest/icon-192x192.png",

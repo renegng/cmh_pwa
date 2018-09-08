@@ -3626,8 +3626,8 @@ body {
     .parallax-caption #logo-landing-page__top {
       filter: drop-shadow(0.06rem 0.06rem 0.12rem);
       max-width: 100%;
-      height: auto;
-      width: auto\9; } }
+      width: auto\9;
+      height: 100%; } }
 
 .parallax--big {
   height: 90vh; }
@@ -3677,6 +3677,9 @@ body {
   justify-content: space-evenly; }
   .parallax-content-row div {
     margin: 2rem 1rem; }
+
+.img-transition-fadein {
+  transition: background-image 1s ease-in-out; }
 
 #logo-landing-page__bottom {
   width: auto;
@@ -3790,7 +3793,19 @@ body {
 
 .fab__playbutton {
   position: absolute;
-  bottom: -1.7rem; }
+  bottom: -1.7rem;
+  animation-name: pulsate;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-iteration-count: 2; }
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.3); }
+  100% {
+    transform: scale(1); } }
 
 .fa {
   display: inline-flex;

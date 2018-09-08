@@ -29,7 +29,10 @@ module.exports = [{
     },
 },
 {
-    entry: "./static/js/swing_app.js",
+    entry: {
+        main: ["./static/js/swing_app.js"]
+        // main: ["./static/js/swing_app.js", "./sw.js"]
+    },
     output: {
         path: __dirname + "/static/js",
         filename: "swing-bundle.js"
