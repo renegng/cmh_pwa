@@ -3967,6 +3967,45 @@ body {
   color: #8d6e63;
   font-size: 8rem !important; }
 
+@media all and (min-width: 50em) {
+  .logo-cmhgob-acercade {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+    .logo-cmhgob-acercade img {
+      max-width: 50%;
+      object-fit: contain; }
+  .logo-colaborador-acercade {
+    width: 20rem;
+    height: auto; } }
+
+@media all and (max-width: 49.99em) {
+  .logo-cmhgob-acercade {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+    .logo-cmhgob-acercade img {
+      max-width: 100%;
+      object-fit: contain; }
+  .logo-colaborador-acercade {
+    width: 20rem;
+    height: auto; } }
+
+@media all and (max-width: 39.99em) {
+  .logo-cmhgob-acercade {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+    .logo-cmhgob-acercade img {
+      max-width: 100%;
+      object-fit: contain; }
+  .logo-colaborador-acercade {
+    width: 20rem;
+    height: auto; } }
+
 .s-googlemaps__iframe {
   width: 100%;
   height: 35rem; }

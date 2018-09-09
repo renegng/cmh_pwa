@@ -5,16 +5,26 @@
 const filesToCache = [
     // Web pages
     '/',
+    '/acercade',
     '/direcciones',
+    '/direcciones/googlemaps',
     '/servicios',
+    '/servicios/maa',
+    '/servicios/mae',
+    '/servicios/mai',
+    '/servicios/mec',
+    '/servicios/mssr',
+    '/servicios/mvcm',
     // Images
-    '/static/images/manifest/logocmh_con_texto.svg',
-    '/static/images/manifest/logocmh_sin_texto.svg',
     '/static/images/assets/ciudadmujer/cmh_02_bg.jpg',
     '/static/images/assets/ciudadmujer/cmh_06_bg.jpg',
     '/static/images/assets/ciudadmujer/cmh_13_bg.jpg',
     '/static/images/assets/ciudadmujer/cmh_14_bg.jpg',
     '/static/images/assets/ciudadmujer/cmh_15_bg.jpg',
+    '/static/images/manifest/bid_slogan.png',
+    '/static/images/manifest/logocmh_con_texto.svg',
+    '/static/images/manifest/logocmh_gob.svg',
+    '/static/images/manifest/logocmh_sin_texto.svg',
     // Media
     '/static/media/audio/cmh_jingle.mp3'
 ];

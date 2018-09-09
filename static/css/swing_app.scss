@@ -747,6 +747,63 @@ body {
   font-size: 8rem !important;
 }
 
+// Laptops and Computers
+@media all and (min-width: 50em) {
+  .logo-cmhgob-acercade {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    img {
+      max-width: 50%;
+      object-fit: contain;
+    }
+  }
+  
+  .logo-colaborador-acercade {
+    width: 20rem;
+    height: auto;
+  }
+}
+
+// Tablets
+@media all and (max-width: 49.99em) {
+  .logo-cmhgob-acercade {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+  
+  .logo-colaborador-acercade {
+    width: 20rem;
+    height: auto;
+  }
+}
+
+// Smartphones
+@media all and (max-width: 39.99em) {
+  .logo-cmhgob-acercade {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+  
+  .logo-colaborador-acercade {
+    width: 20rem;
+    height: auto;
+  }
+}
+
 // Google Maps component
 .s-googlemaps__iframe {
   width: 100%;

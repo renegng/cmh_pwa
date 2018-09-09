@@ -90,7 +90,7 @@ const whatsAppShareURL = "https://wa.me/?text=";
 
 function shareRedirect(e) {
     // Default text of the share message
-    var shareText = "Check this out!";
+    var shareText = "¡Mira lo que encontré!";
     shareText = encodeURIComponent(shareText);
 
     // Share parameters
@@ -118,7 +118,7 @@ function shareRedirect(e) {
             window.open(linkedInShareURL + shareMyURL + "&title=" + shareTitle);
             break;
         case 'twitter':
-            window.open(twitterShareURL + shareText + " - " + shareTitle);
+            window.open(twitterShareURL + shareText + " - " + shareTitle + ": " + shareMyURL);
             break;
         case 'whatsapp':
             window.open(whatsAppShareURL + shareText + " - " + shareTitle + ": " + shareMyURL);
@@ -197,16 +197,16 @@ if (!isNull(document.querySelector('.s-googlemaps'))) {
 // Even though this service worker is not on the root of this web application
 // It has been configured, through swing_main.py to make it look like it is.
 
-// if ('serviceWorker' in navigator) {
-//     navigator.serviceWorker.register('/sw.js', { scope: '/' })
-//         .then(reg => {
-//             // registration worked
-//             console.log('Service Worker Registered. Scope is ' + reg.scope);
-//         }).catch(error => {
-//             // registration failed
-//             console.log('Service Worker Registration Failed with ' + error);
-//         });
-// }
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js', { scope: '/' })
+        .then(reg => {
+            // registration worked
+            console.log('Service Worker Registered. Scope is ' + reg.scope);
+        }).catch(error => {
+            // registration failed
+            console.log('Service Worker Registration Failed with ' + error);
+        });
+}
 
 
 // Add to Homescreen (A2H) Event
