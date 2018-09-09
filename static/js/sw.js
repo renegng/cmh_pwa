@@ -56,7 +56,7 @@ self.addEventListener('activate', event => {
 
 // Fetch Event
 self.addEventListener('fetch', event => {
-    console.log('Fetch Event initialized for: ', event.request.url);
+    //console.log('Fetch Event initialized for: ', event.request.url);
     event.respondWith(
         caches.match(event.request)
             .then(response => {

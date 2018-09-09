@@ -1,0 +1,29 @@
+{% extends 'layout_topbar_footer.html' %} {% block page_description %}Ciudad Mujer Honduras, Direcciones en Google Maps{%
+endblock %} {% block page_title %}CMH - Direcciones Google Maps{% endblock %} {% block body %}
+<section class="s-maincontainer">
+    <main class="s-content">
+        <article class="s-article s-article--centered">
+            <header>
+                <h2>
+                    Centros de Ciudad Mujer
+                </h2>
+            </header>
+            <section class="s-article__text s-article__text--centered">
+                <p>
+                    <i class="material-icons s-article__graphic-gm" aria-hidden="true">map</i>
+                </p>
+                <p>
+                    <i>
+                        Estos son los Centros de Ciudad Mujer más cercanos:
+                    </i>
+                </p>
+            </section>
+            <section class="s-googlemaps">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1WLhrVnXlvbOj9tF7n4-MbjJRBuSCfxE_&z=8" class="s-googlemaps__iframe" frameborder="0"
+                    style="border:0;" allowfullscreen>
+                </iframe>
+            </section>
+        </article>
+    </main>
+</section>
+{% endblock %}

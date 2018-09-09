@@ -168,20 +168,45 @@ function landingPageImgCarousel(container) {
     lpic++;
 }
 
+// Google Maps component
+if (!isNull(document.querySelector('.s-googlemaps'))) {
+    var gmComp = document.querySelector('.s-googlemaps');
+    var gmURLL = 'https://www.google.com/maps?output=embed&daddr=ciudad+mujer&saddr=';
+    var gmIfrS = "<iframe src='";
+    var gmIfrE = "' class='s-googlemaps__iframe' frameborder='0' style='border:0;' allowfullscreen></iframe>";
+    // Try HTML5 geolocation.
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+            gmComp.innerHTML = "";
+            gmComp.innerHTML = gmIfrS + gmURLL + pos.lat + ',' + pos.lng + gmIfrE;
+        }, () => {
+            console.log('User denied access to location');
+        });
+    } else {
+        // Browser doesn't support Geolocation
+        console.log('Your browser does not support Geolocation');
+    }
+}
+
 // Registering the service worker for the pwa
 // NOTE
 // Even though this service worker is not on the root of this web application
 // It has been configured, through swing_main.py to make it look like it is.
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js', { scope: '/' })
-        .then(reg => {
-            // registration worked
-            console.log('Service Worker Registered. Scope is ' + reg.scope);
-        }).catch(error => {
-            // registration failed
-            console.log('Service Worker Registration Failed with ' + error);
-        });
-}
+
+// if ('serviceWorker' in navigator) {
+//     navigator.serviceWorker.register('/sw.js', { scope: '/' })
+//         .then(reg => {
+//             // registration worked
+//             console.log('Service Worker Registered. Scope is ' + reg.scope);
+//         }).catch(error => {
+//             // registration failed
+//             console.log('Service Worker Registration Failed with ' + error);
+//         });
+// }
 
 
 // Add to Homescreen (A2H) Event

@@ -10,6 +10,10 @@ def _article():
 def _direcciones():
     return render_template('direcciones.html')
 
+@content.route('/direcciones/googlemaps')
+def _direccionesGM():
+    return render_template('direcciones_googlemaps.html')
+
 @content.route('/servicios')
 def _servicios():
     return render_template('servicios.html')
