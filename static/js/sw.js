@@ -15,6 +15,7 @@ const filesToCache = [
     '/servicios/mec',
     '/servicios/mssr',
     '/servicios/mvcm',
+    '/preguntasfrecuentes',
     // Images
     '/static/images/assets/ciudadmujer/cmh_02_bg.jpg',
     '/static/images/assets/ciudadmujer/cmh_06_bg.jpg',
