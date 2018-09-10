@@ -363,7 +363,7 @@ body {
   color: $mdc-theme-on-primary;
 }
 
-.media-icon__backcolor-qa {
+.media-icon__backcolor-faq {
   background-color: #d84315;
   color: $mdc-theme-on-primary;
 }
@@ -705,9 +705,30 @@ body {
       color: #001d7e;
     }
 
+    .mdc-list-item__graphic-gen {
+      color: #d84315;
+    }
+
     .mdc-list-item__text {
       white-space: normal;
       text-align: initial;
+    }
+
+    .mdc-list-item__secondary-text {
+      white-space: normal;
+      text-align: initial;
+    }
+
+    .mdc-list-item__faq-answer-hide {
+      display: none;
+      font-size: 1rem;
+      margin: 0.5rem;
+    }
+
+    .mdc-list-item__faq-answer-show {
+      display: inherit;
+      font-size: 1rem;
+      margin: 0.5rem;
     }
   }
 }
@@ -744,6 +765,11 @@ body {
 
 .s-article__graphic-gm {
   color: #8d6e63;
+  font-size: 8rem !important;
+}
+
+.s-article__graphic-faq {
+  color: #d84315;
   font-size: 8rem !important;
 }
 

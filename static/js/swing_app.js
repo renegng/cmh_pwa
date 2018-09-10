@@ -11,12 +11,9 @@ import { isNull } from 'util';
 // AOS.init();
 
 // Material Icon Toggle
-var playAudioButton = null;
-if (!isNull(document.querySelector('.fab__playbutton'))) {
-    playAudioButton = document.querySelector('.fab__playbutton');
-    MDCIconToggle.attachTo(playAudioButton);
-    playAudioButton.addEventListener('MDCIconToggle:change', ({ detail }) => playAudio(detail));
-}
+Array.from(document.getElementsByClassName('mdc-icon-toggle')).forEach((elem) => {
+    MDCIconToggle.attachTo(elem);
+});
 
 // Material Drawer
 var drawer = null;
@@ -129,6 +126,12 @@ function shareRedirect(e) {
 }
 
 // Audio playback
+var playAudioButton = null;
+if (!isNull(document.querySelector('.fab__playbutton'))) {
+    playAudioButton = document.querySelector('.fab__playbutton');
+    playAudioButton.addEventListener('MDCIconToggle:change', ({ detail }) => playAudio(detail));
+}
+
 function playAudio(detail) {
     var audio = document.getElementById('cmh-jingle');
 
@@ -192,21 +195,40 @@ if (!isNull(document.querySelector('.s-googlemaps'))) {
     }
 }
 
+// FAQ Material List behaviour
+if (!isNull(document.querySelector('.mdc-list-item__collapse'))) {
+    Array.from(document.getElementsByClassName('mdc-list-item__collapse')).forEach((elem) => {
+        elem.addEventListener('click', () => {
+            var secondaryTxt = elem.querySelector('.mdc-list-item__secondary-text');
+            var collapseIcon = elem.querySelector('.mdc-list-item__meta');
+            console.log(collapseIcon);
+
+            if (secondaryTxt.classList.contains('mdc-list-item__faq-answer-hide')) {
+                secondaryTxt.classList.remove('mdc-list-item__faq-answer-hide');
+                secondaryTxt.classList.add('mdc-list-item__faq-answer-show');
+            } else {
+                secondaryTxt.classList.remove('mdc-list-item__faq-answer-show');
+                secondaryTxt.classList.add('mdc-list-item__faq-answer-hide');
+            }
+        });
+    });
+}
+
 // Registering the service worker for the pwa
 // NOTE
 // Even though this service worker is not on the root of this web application
 // It has been configured, through swing_main.py to make it look like it is.
 
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js', { scope: '/' })
-        .then(reg => {
-            // registration worked
-            console.log('Service Worker Registered. Scope is ' + reg.scope);
-        }).catch(error => {
-            // registration failed
-            console.log('Service Worker Registration Failed with ' + error);
-        });
-}
+// if ('serviceWorker' in navigator) {
+//     navigator.serviceWorker.register('/sw.js', { scope: '/' })
+//         .then(reg => {
+//             // registration worked
+//             console.log('Service Worker Registered. Scope is ' + reg.scope);
+//         }).catch(error => {
+//             // registration failed
+//             console.log('Service Worker Registration Failed with ' + error);
+//         });
+// }
 
 
 // Add to Homescreen (A2H) Event
