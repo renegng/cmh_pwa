@@ -18,7 +18,7 @@ def _direcciones():
 def _direccionesGM():
     return render_template('direcciones_googlemaps.html')
 
-@content.route('/preguntasfrecuentes')
+@content.route('/preguntasfrecuentes', strict_slashes=False)
 @content.route('/preguntasfrecuentes/')
 def _preguntasfrecuentes():
     return render_template('preguntasfrecuentes.html')
