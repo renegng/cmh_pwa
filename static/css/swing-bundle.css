@@ -3917,6 +3917,9 @@ body {
 .s-article__text--centered {
   text-align: center; }
 
+.s-article__text-faq {
+  margin-top: 5rem; }
+
 .s-article__list {
   max-width: 50rem;
   margin: auto; }

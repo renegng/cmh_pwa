@@ -201,14 +201,15 @@ if (!isNull(document.querySelector('.mdc-list-item__collapse'))) {
         elem.addEventListener('click', () => {
             var secondaryTxt = elem.querySelector('.mdc-list-item__secondary-text');
             var collapseIcon = elem.querySelector('.mdc-list-item__meta');
-            console.log(collapseIcon);
 
             if (secondaryTxt.classList.contains('mdc-list-item__faq-answer-hide')) {
                 secondaryTxt.classList.remove('mdc-list-item__faq-answer-hide');
                 secondaryTxt.classList.add('mdc-list-item__faq-answer-show');
+                collapseIcon.dispatchEvent(new Event('click'));
             } else {
                 secondaryTxt.classList.remove('mdc-list-item__faq-answer-show');
                 secondaryTxt.classList.add('mdc-list-item__faq-answer-hide');
+                collapseIcon.dispatchEvent(new Event('click'));
             }
         });
     });
@@ -236,7 +237,7 @@ var deferredPrompt;
 var appIsInstalled = false;
 
 var installSBDataObj = {
-    message: '¿Deseas Instalar la App?',
+    message: '¿Deseas Instalar nuestra App? (¡Gratis!)',
     actionText: 'Si',
     timeout: 20000,
     actionHandler: () => {
