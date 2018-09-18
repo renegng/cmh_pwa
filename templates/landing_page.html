@@ -5,7 +5,7 @@ endblock %} {% block page_title %}Ciudad Mujer Honduras{% endblock %} {% block b
         <section id="landing-img-carousel" class="parallax parallax--medium img-transition-fadein" 
                  style="background-image: url(../static/images/assets/ciudadmujer/cmh_02_bg.jpg);">
             <div class="parallax-caption">
-                <img id="logo-landing-page__top" src="../static/images/manifest/logocmh_con_texto.svg" alt="Logo Ciudad Mujer Honduras">
+                <img id="logo-landing-page__top" src="{{ url_for('static', filename='images/manifest/logocmh_con_texto.svg') }}" alt="Logo Ciudad Mujer Honduras">
                 <span id="logo-landing-page__top-text" class="parallax-caption--dark">
                     ¡Un lugar de oportunidades para ti!
                 </span>
@@ -141,7 +141,7 @@ endblock %} {% block page_title %}Ciudad Mujer Honduras{% endblock %} {% block b
             </div>
         </section>
         <audio id="cmh-jingle" preload="metadata">
-            <source src="../static/media/audio/cmh_jingle.mp3" type="audio/mpeg">
+            <source src="{{ url_for('static', filename='media/audio/cmh_jingle.mp3') }}" type="audio/mpeg">
             Tu navegador no soporta este elemento.
         </audio>
     </main>

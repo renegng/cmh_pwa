@@ -64,7 +64,7 @@
             </div>
         </header>
         -->
-        <img id="logo-nav-drawer" src="../static/images/manifest/logocmh_sin_texto.svg" alt="Logo Ciudad Mujer Honduras" />
+        <img id="logo-nav-drawer" src="{{ url_for('static', filename='images/manifest/logocmh_sin_texto.svg') }}" alt="Logo Ciudad Mujer Honduras" />
         <nav class="mdc-drawer__content mdc-list">
             <a class="mdc-list-item" href="/">
                 <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>Inicio
@@ -98,7 +98,7 @@
     <h2>
         ¡Solo faltas tu!
     </h2>
-    <img id="logo-landing-page__bottom" src="../static/images/manifest/logocmh_solo_texto.png" alt="Logo Ciudad Mujer Honduras">
+    <img id="logo-landing-page__bottom" src="{{ url_for('static', filename='images/manifest/logocmh_solo_texto.png') }}" alt="Logo Ciudad Mujer Honduras">
 </section>
 <button id="floatingButton" class="mdc-fab fab--absolute fab__whatsapp" aria-label="WhatsApp Contact Center" 
         onclick="window.open('https://wa.me/50497396698');">

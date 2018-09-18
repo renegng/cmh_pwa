@@ -30,7 +30,7 @@ const filesToCache = [
     '/static/media/audio/cmh_jingle.mp3'
 ];
 
-const genCacheName = 'generalCache-v20180918';
+const genCacheName = 'generalCache-v2018-09-18-03';
 
 // Install Event
 self.addEventListener('install', event => {
@@ -49,7 +49,7 @@ self.addEventListener('install', event => {
 // Activate Event
 self.addEventListener('activate', event => {
     console.log('Service Worker Activated!');
-    var cacheWhitelist = ['generalCache-v20180918'];
+    var cacheWhitelist = ['generalCache-v2018-09-18-03'];
     // Remove unwanted caches
     event.waitUntil(
         caches.keys().then(cacheNames => {
