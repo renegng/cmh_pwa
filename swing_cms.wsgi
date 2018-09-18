@@ -3,7 +3,7 @@ import sys
 import logging
 
 logging.basicConfig(stream=sys.stderr)
-sys.path.insert(0,"/var/www/swing_cms/")
+sys.path.insert(0,"/var/www/cmhpwa.rxdbit.com/cmh_pwa/")
 
 from swing_main import app as application
 # 
