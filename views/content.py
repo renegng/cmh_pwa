@@ -2,51 +2,50 @@ from flask import Blueprint, render_template
 
 content = Blueprint('content', __name__, template_folder='templates', static_folder='static')
 
-@content.route('/article')
+@content.route('/article/')
 def _article():
     return render_template('article.html')
 
-@content.route('/acercade')
+@content.route('/acercade/')
 def _acercade():
     return render_template('acercade.html')
 
-@content.route('/direcciones')
+@content.route('/direcciones/')
 def _direcciones():
     return render_template('direcciones.html')
 
-@content.route('/direcciones/googlemaps')
+@content.route('/direcciones/googlemaps/')
 def _direccionesGM():
     return render_template('direcciones_googlemaps.html')
 
-@content.route('/preguntasfrecuentes', strict_slashes=False)
 @content.route('/preguntasfrecuentes/')
 def _preguntasfrecuentes():
     return render_template('preguntasfrecuentes.html')
 
-@content.route('/servicios')
+@content.route('/servicios/')
 def _servicios():
     return render_template('servicios.html')
 
-@content.route('/servicios/mae')
+@content.route('/servicios/mae/')
 def _servicios_mae():
     return render_template('servicios_mae.html')
 
-@content.route('/servicios/mssr')
+@content.route('/servicios/mssr/')
 def _servicios_mssr():
     return render_template('servicios_mssr.html')
 
-@content.route('/servicios/mvcm')
+@content.route('/servicios/mvcm/')
 def _servicios_mvcm():
     return render_template('servicios_mvcm.html')
 
-@content.route('/servicios/maa')
+@content.route('/servicios/maa/')
 def _servicios_maa():
     return render_template('servicios_maa.html')
 
-@content.route('/servicios/mec')
+@content.route('/servicios/mec/')
 def _servicios_mec():
     return render_template('servicios_mec.html')
 
-@content.route('/servicios/mai')
+@content.route('/servicios/mai/')
 def _servicios_mai():
     return render_template('servicios_mai.html')
