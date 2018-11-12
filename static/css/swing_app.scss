@@ -368,6 +368,11 @@ body {
   color: $mdc-theme-on-primary;
 }
 
+.media-icon__backcolor-docs {
+  background-color: #6688A8;
+  color: $mdc-theme-on-primary;
+}
+
 .media-icon__backcolor-face {
   background-color: #ffcdd2;
   color: $mdc-theme-on-primary;
@@ -789,7 +794,13 @@ body {
       object-fit: contain;
     }
   }
-  
+
+  .logos-colaborador-acercade {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+  }
+
   .logo-colaborador-acercade {
     width: 20rem;
     height: auto;
@@ -809,6 +820,12 @@ body {
     }
   }
   
+  .logos-colaborador-acercade {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+  }
+
   .logo-colaborador-acercade {
     width: 20rem;
     height: auto;
@@ -826,6 +843,12 @@ body {
       max-width: 100%;
       object-fit: contain;
     }
+  }
+
+  .logos-colaborador-acercade {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
   }
   
   .logo-colaborador-acercade {

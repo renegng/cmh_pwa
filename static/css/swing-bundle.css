@@ -3699,6 +3699,10 @@ body {
   background-color: #d84315;
   color: #ffffff; }
 
+.media-icon__backcolor-docs {
+  background-color: #6688A8;
+  color: #ffffff; }
+
 .media-icon__backcolor-face {
   background-color: #ffcdd2;
   color: #ffffff; }
@@ -3996,6 +4000,10 @@ body {
     .logo-cmhgob-acercade img {
       max-width: 50%;
       object-fit: contain; }
+  .logos-colaborador-acercade {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly; }
   .logo-colaborador-acercade {
     width: 20rem;
     height: auto; } }
@@ -4009,6 +4017,10 @@ body {
     .logo-cmhgob-acercade img {
       max-width: 100%;
       object-fit: contain; }
+  .logos-colaborador-acercade {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly; }
   .logo-colaborador-acercade {
     width: 20rem;
     height: auto; } }
@@ -4022,6 +4034,10 @@ body {
     .logo-cmhgob-acercade img {
       max-width: 100%;
       object-fit: contain; }
+  .logos-colaborador-acercade {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly; }
   .logo-colaborador-acercade {
     width: 20rem;
     height: auto; } }

@@ -3,7 +3,7 @@ import sys
 import logging
 
 logging.basicConfig(stream=sys.stderr)
-sys.path.insert(0,"/var/www/cmhpwa.rxdbit.com/cmh_pwa/")
+sys.path.insert(0,"/var/www/ciudadmujer.gob.hn/cmh_pwa/")
 
 from swing_main import app as application
 # 
@@ -12,4 +12,4 @@ from swing_main import app as application
 # You could use a random generated string like:
 #   python -c 'import os; print(os.urandom(16))'
 #
-application.secret_key = '81025051'.encode('utf8')
+application.secret_key = '11810221'.encode('utf8')

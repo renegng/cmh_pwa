@@ -37,26 +37,26 @@
     <meta name="theme-color" content="#743a87">
 
     <!-- Open Graph Metatags to share on Facebook -->
-    <meta name="twitter:site" content="@username">
+    <meta name="twitter:site" content="@ciudadmujerhn">
     <meta name="twitter:card" content="summary">
     <meta property="og:url" content="{{ request.url }}">  
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ self.page_title() }}">
-    <meta property="og:site_name" content="Swing CMS">
+    <meta property="og:site_name" content="Ciudad Mujer Honduras">
     <meta property="og:description" content="{{ self.page_description() }}">
     <meta property="og:image" content="{{ url_for('static', filename='images/manifest/icon-512x512.png') }}">
 
     <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Swing CMS">
+    <meta name="application-name" content="Ciudad Mujer">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Swing CMS">
+    <meta name="apple-mobile-web-app-title" content="Ciudad Mujer">
 
     <!-- Homescreen icons -->
-    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/manifest/icon-48x48.png') }}">
+    <link rel="apple-touch-icon" sizes="48x48" href="{{ url_for('static', filename='images/manifest/icon-48x48.png') }}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='images/manifest/icon-72x72.png') }}">
     <link rel="apple-touch-icon" sizes="96x96" href="{{ url_for('static', filename='images/manifest/icon-96x96.png') }}">
     <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='images/manifest/icon-144x144.png') }}">
@@ -65,8 +65,17 @@
 
     <!-- Tile icon for Windows 8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="{{ url_for('static', filename='images/manifest/icon-144x144.png') }}">
-    <meta name="msapplication-TileColor" content="#3f51b5">
+    <meta name="msapplication-TileColor" content="#743a87">
     <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129094484-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-129094484-1');
+    </script>
 
 </head>
 <body class="mdc-typography">
