@@ -18,6 +18,10 @@ def _direcciones():
 def _direccionesGM():
     return render_template('direcciones_googlemaps.html')
 
+@content.route('/noticias/')
+def _noticias():
+    return render_template('noticias.html')
+
 @content.route('/preguntasfrecuentes/')
 def _preguntasfrecuentes():
     return render_template('preguntasfrecuentes.html')
