@@ -34,6 +34,10 @@ $mdc-theme-on-background: #c96b0f;
 @import "@material/list/mdc-list";
 @import "@material/menu/mdc-menu";
 @import "@material/snackbar/mdc-snackbar";
+@import "@material/tab/mdc-tab";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab-scroller/mdc-tab-scroller";
 @import "@material/toolbar/mdc-toolbar";
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/typography/mdc-typography";
@@ -666,7 +670,7 @@ body {
       float: left;
       margin: 1rem 1rem 1rem 0rem;
     }
-
+    
     .s-article__text-wrap-right {
       float: right;
       margin: 1rem 0rem 1rem 1rem;
@@ -780,6 +784,20 @@ body {
 .s-article__graphic-faq {
   color: #d84315;
   font-size: 8rem !important;
+}
+
+.s-article__graphic-comingsoon {
+  color: #f69f69;
+  font-size: 8rem !important;
+}
+
+.s-article__text--hidden {
+  display: none;
+}
+
+.s-article__text-comingsoon-header {
+  font-size: 2.5rem;
+  color: #f69f69;
 }
 
 // Laptops and Computers

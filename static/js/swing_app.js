@@ -4,6 +4,10 @@ import { MDCMenu, Corner } from '@material/menu';
 import { MDCPersistentDrawer, MDCPersistentDrawerFoundation, MDCPermanentDrawer, MDCPermanentDrawerFoundation, MDCTemporaryDrawer, MDCTemporaryDrawerFoundation, util } from '@material/drawer';
 import { MDCRipple } from '@material/ripple';
 import { MDCSnackbar, MDCSnackbarFoundation } from '@material/snackbar';
+import { MDCTab } from '@material/tab';
+import { MDCTabBar } from '@material/tab-bar';
+import { MDCTabIndicator } from '@material/tab-indicator';
+import { MDCTabScroller } from '@material/tab-scroller';
 import { MDCTopAppBar } from '@material/top-app-bar/index';
 import { isNull } from 'util';
 
@@ -76,6 +80,19 @@ if (!isNull(document.querySelector('.mdc-top-app-bar'))) {
     topAppBar = new MDCTopAppBar(document.querySelector('.mdc-top-app-bar'));
 }
 
+// Material Tab
+var mdcTab = null;
+var mdcTabBar = null;
+var mdcTabIndicator = null;
+var mdcTabScroller = null;
+if (!isNull(document.querySelector('.mdc-tab-bar'))) {
+    mdcTab = new MDCTab(document.querySelector('.mdc-tab'));
+    mdcTabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
+    mdcTabIndicator = new MDCTabIndicator(document.querySelector('.mdc-tab-indicator'));
+    mdcTabScroller = new MDCTabScroller(document.querySelector('.mdc-tab-scroller'));
+    document.querySelector('#mdc-tab-bar__id-noticias').addEventListener('MDCTabBar:activated', evt => showTabContent(evt));
+}
+
 // Social Media Share Redirect
 // Applications URLs
 const emailShareUrl = "mailto:?body=";
@@ -123,6 +140,20 @@ function shareRedirect(e) {
         default:
             console.log("No implementation for SHARING to app named: " + shareAppName);
     }
+}
+
+// Show Tabs Content
+function showTabContent(e) {
+    var tabId = e.target.id;
+    var tabIndex = e.detail.index;
+    var tabsContentId = tabId + "-content";
+    var tabsContentEl = document.getElementById(tabsContentId);
+    Array.from(tabsContentEl.getElementsByClassName('s-article__text')).forEach((elem) => {
+        if (elem.tabIndex == tabIndex)
+            elem.classList.remove('s-article__text--hidden');
+        else
+            elem.classList.add('s-article__text--hidden');
+    });
 }
 
 // Audio playback

@@ -8,6 +8,7 @@ const filesToCache = [
     '/acercade/',
     '/direcciones/',
     '/direcciones/googlemaps/',
+    '/noticias/',
     '/servicios/',
     '/servicios/maa/',
     '/servicios/mae/',
@@ -34,7 +35,7 @@ const filesToCache = [
     '/static/media/audio/cmh_jingle.mp3'
 ];
 
-const genCacheName = 'generalCache-v2018-11-12-01';
+const genCacheName = 'generalCache-v2018-11-16-01';
 
 // Install Event
 self.addEventListener('install', event => {
@@ -53,7 +54,7 @@ self.addEventListener('install', event => {
 // Activate Event
 self.addEventListener('activate', event => {
     console.log('Service Worker Activated!');
-    var cacheWhitelist = ['generalCache-v2018-11-12-01'];
+    var cacheWhitelist = ['generalCache-v2018-11-16-01'];
     // Remove unwanted caches
     event.waitUntil(
         caches.keys().then(cacheNames => {

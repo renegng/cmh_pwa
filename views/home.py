@@ -6,6 +6,6 @@ home = Blueprint('home', __name__, template_folder='templates', static_folder='s
 def _landing_page():
     return render_template('landing_page.html')
 
-@home.route('/home/')
-def _home():
-    return render_template('home.html')
+# @home.route('/home/')
+# def _home():
+#     return render_template('home.html')
