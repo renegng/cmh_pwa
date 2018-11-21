@@ -26,6 +26,8 @@ const filesToCache = [
     '/static/images/assets/ciudadmujer/cmh_13_bg.jpg',
     '/static/images/assets/ciudadmujer/cmh_14_bg.jpg',
     '/static/images/assets/ciudadmujer/cmh_15_bg.jpg',
+    '/static/images/assets/placeholders/reminder.jpg',
+    '/static/images/assets/placeholders/todolists.jpg',
     '/static/images/manifest/bid_slogan.png',
     '/static/images/manifest/logocmh_con_texto.svg',
     '/static/images/manifest/logocmh_gob.svg',
@@ -35,7 +37,7 @@ const filesToCache = [
     '/static/media/audio/cmh_jingle.mp3'
 ];
 
-const genCacheName = 'generalCache-v2018-11-16-01';
+const genCacheName = 'generalCache-v2018-11-20-01';
 
 // Install Event
 self.addEventListener('install', event => {
@@ -54,7 +56,7 @@ self.addEventListener('install', event => {
 // Activate Event
 self.addEventListener('activate', event => {
     console.log('Service Worker Activated!');
-    var cacheWhitelist = ['generalCache-v2018-11-16-01'];
+    var cacheWhitelist = ['generalCache-v2018-11-20-01'];
     // Remove unwanted caches
     event.waitUntil(
         caches.keys().then(cacheNames => {

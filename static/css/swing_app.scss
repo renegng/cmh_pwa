@@ -26,6 +26,7 @@ $mdc-theme-on-background: #c96b0f;
 // $mdc-theme-on-background: #000000;
 
 @import "aos/src/sass/aos";
+@import "@material/animation/functions";
 @import "@material/button/mdc-button";
 @import "@material/card/mdc-card";
 @import "@material/drawer/mdc-drawer";
@@ -452,6 +453,10 @@ body {
       position: absolute;
     }
   }
+
+  .parallax-content {
+    justify-content: space-evenly;
+  }
 }
 
 // Tablets
@@ -488,6 +493,12 @@ body {
       position: absolute;
     }
   }
+
+  .parallax-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 
 // Smartphones
@@ -523,6 +534,12 @@ body {
       bottom: 0;
       position: absolute;
     }
+  }
+
+  .parallax-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }
 
@@ -586,6 +603,32 @@ body {
 
   div {
     margin: 2rem 1rem;
+  }
+}
+
+.parallax-content--wrap-left {
+  float: left;
+  margin: 1rem 1rem 1rem 0rem;
+
+  i {
+    font-size: 8rem;
+  }
+}
+
+.parallax-content--wrap-right {
+  float: right;
+  margin: 1rem 0rem 1rem 1rem;
+
+  i {
+    font-size: 8rem;
+  }
+}
+
+.parallax-content--text {
+  display: flow-root;
+
+  .mdc-list {
+    color: inherit;
   }
 }
 
@@ -789,6 +832,34 @@ body {
 .s-article__graphic-comingsoon {
   color: #f69f69;
   font-size: 8rem !important;
+}
+
+@keyframes s-fade-out {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+@keyframes s-fade-in {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.s-article__text--show {
+  animation: mdc-animation-enter(s-fade-in, 350ms);
 }
 
 .s-article__text--hidden {

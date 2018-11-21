@@ -1,4 +1,4 @@
-import AOS from 'aos';
+// import AOS from 'aos';
 import { MDCIconToggle } from '@material/icon-toggle';
 import { MDCMenu, Corner } from '@material/menu';
 import { MDCPersistentDrawer, MDCPersistentDrawerFoundation, MDCPermanentDrawer, MDCPermanentDrawerFoundation, MDCTemporaryDrawer, MDCTemporaryDrawerFoundation, util } from '@material/drawer';
@@ -149,10 +149,13 @@ function showTabContent(e) {
     var tabsContentId = tabId + "-content";
     var tabsContentEl = document.getElementById(tabsContentId);
     Array.from(tabsContentEl.getElementsByClassName('s-article__text')).forEach((elem) => {
-        if (elem.tabIndex == tabIndex)
+        if (elem.tabIndex == tabIndex) {
             elem.classList.remove('s-article__text--hidden');
-        else
+            elem.classList.add('s-article__text--show');
+        } else {
             elem.classList.add('s-article__text--hidden');
+            elem.classList.remove('s-article__text--show');
+        }
     });
 }
 

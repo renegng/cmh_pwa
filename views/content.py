@@ -15,7 +15,7 @@ def _direcciones():
     return render_template('direcciones.html')
 
 @content.route('/direcciones/googlemaps/')
-def _direccionesGM():
+def _direcciones_gm():
     return render_template('direcciones_googlemaps.html')
 
 @content.route('/noticias/')

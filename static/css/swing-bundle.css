@@ -4161,7 +4161,9 @@ body {
       filter: drop-shadow(0.06rem 0.06rem 0.12rem); }
     .parallax-caption #logo-landing-page__top-text {
       bottom: 0;
-      position: absolute; } }
+      position: absolute; }
+  .parallax-content {
+    justify-content: space-evenly; } }
 
 @media all and (max-width: 49.99em) {
   .parallax {
@@ -4188,7 +4190,11 @@ body {
       filter: drop-shadow(0.06rem 0.06rem 0.12rem); }
     .parallax-caption #logo-landing-page__top-text {
       bottom: 0;
-      position: absolute; } }
+      position: absolute; }
+  .parallax-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; } }
 
 @media all and (max-width: 39.99em) {
   .parallax {
@@ -4215,7 +4221,11 @@ body {
       filter: drop-shadow(0.06rem 0.06rem 0.12rem); }
     .parallax-caption #logo-landing-page__top-text {
       bottom: 0;
-      position: absolute; } }
+      position: absolute; }
+  .parallax-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; } }
 
 .parallax--big {
   height: 90vh; }
@@ -4265,6 +4275,23 @@ body {
   justify-content: space-evenly; }
   .parallax-content-row div {
     margin: 2rem 1rem; }
+
+.parallax-content--wrap-left {
+  float: left;
+  margin: 1rem 1rem 1rem 0rem; }
+  .parallax-content--wrap-left i {
+    font-size: 8rem; }
+
+.parallax-content--wrap-right {
+  float: right;
+  margin: 1rem 0rem 1rem 1rem; }
+  .parallax-content--wrap-right i {
+    font-size: 8rem; }
+
+.parallax-content--text {
+  display: flow-root; }
+  .parallax-content--text .mdc-list {
+    color: inherit; }
 
 .img-transition-fadein {
   transition: background-image 1s ease-in-out; }
@@ -4395,6 +4422,25 @@ body {
 .s-article__graphic-comingsoon {
   color: #f69f69;
   font-size: 8rem !important; }
+
+@keyframes s-fade-out {
+  from {
+    transform: translateY(0);
+    opacity: 1; }
+  to {
+    transform: translateY(-20px);
+    opacity: 0; } }
+
+@keyframes s-fade-in {
+  from {
+    transform: translateY(-20px);
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+
+.s-article__text--show {
+  animation: s-fade-in 350ms 0ms cubic-bezier(0, 0, 0.2, 1); }
 
 .s-article__text--hidden {
   display: none; }
