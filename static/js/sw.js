@@ -17,6 +17,9 @@ const filesToCache = [
     '/servicios/mssr/',
     '/servicios/mvcm/',
     '/preguntasfrecuentes/',
+    // Web assets
+    'https://fonts.googleapis.com/icon?family=Material+Icons',
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
     // Images
     '/static/images/assets/ccm/cmh_choloma.jpg',
     '/static/images/assets/ccm/cmh_kennedy.jpg',
@@ -37,7 +40,7 @@ const filesToCache = [
     '/static/media/audio/cmh_jingle.mp3'
 ];
 
-const genCacheName = 'generalCache-v2018-11-20-01';
+const genCacheName = 'generalCache-v2019-02-07-01';
 
 // Install Event
 self.addEventListener('install', event => {
@@ -56,7 +59,7 @@ self.addEventListener('install', event => {
 // Activate Event
 self.addEventListener('activate', event => {
     console.log('Service Worker Activated!');
-    var cacheWhitelist = ['generalCache-v2018-11-20-01'];
+    var cacheWhitelist = [genCacheName];
     // Remove unwanted caches
     event.waitUntil(
         caches.keys().then(cacheNames => {

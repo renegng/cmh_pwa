@@ -13,7 +13,7 @@ def seo_robots():
 def seo_sitemap():
       # Generate sitemap.xml. Makes a list of urls and date modified.
       pages = []
-      datemodified = datetime.datetime(2018, 10, 1).isoformat()
+      datemodified = datetime.date(2018, 10, 1).isoformat()
       
       # static pages
       for rule in current_app.url_map.iter_rules():

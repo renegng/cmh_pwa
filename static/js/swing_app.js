@@ -249,6 +249,15 @@ if (!isNull(document.querySelector('.mdc-list-item__collapse'))) {
     });
 }
 
+// Login Button
+var loginButton = null;
+if (!isNull(document.querySelector('#loginButton'))) {
+    loginButton = document.querySelector('#loginButton');
+}
+if (loginButton != null) {
+    loginButton.addEventListener('click', () => (window.location.href = '/login'));
+}
+
 // Registering the service worker for the pwa
 // NOTE
 // Even though this service worker is not on the root of this web application
