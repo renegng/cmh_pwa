@@ -258,6 +258,32 @@ if (loginButton != null) {
     loginButton.addEventListener('click', () => (window.location.href = '/login'));
 }
 
+// Read More Button
+if (!isNull(document.querySelector('.mdc-card__action--button'))) {
+    Array.from(document.getElementsByClassName('mdc-card__action--button')).forEach((elem) => {
+        elem.addEventListener('click', () => {
+            var elemId = elem.id;
+            var readMoreButtonText = elem.querySelector('.mdc-button__label');
+            var readMoreContent = document.getElementById('RMC-' + elemId);
+
+            if (readMoreContent.classList.contains('s-mdc-card__body--hidden')) {
+                readMoreContent.classList.remove('s-mdc-card__body--hidden');
+                readMoreButtonText.innerHTML = "Leer menos...";
+            } else {
+                readMoreContent.classList.add('s-mdc-card__body--hidden');
+                readMoreButtonText.innerHTML = "Leer más...";
+            }
+        });
+    });
+}
+
+// Image List Open Image
+if (!isNull(document.querySelector('.s-mdc-image-list__image'))) {
+    Array.from(document.getElementsByClassName('s-mdc-image-list__image')).forEach((elem) => {
+        elem.addEventListener('click', () => (window.open(elem.getAttribute('src'))));
+    });
+}
+
 // Registering the service worker for the pwa
 // NOTE
 // Even though this service worker is not on the root of this web application

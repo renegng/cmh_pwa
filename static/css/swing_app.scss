@@ -18,6 +18,7 @@ $swn-typography-parallax: 'Lato', sans-serif;
 @import "@material/card/mdc-card";
 @import "@material/drawer/mdc-drawer";
 @import "@material/fab/mdc-fab";
+@import "@material/image-list/mdc-image-list";
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@material/list/mdc-list";
 @import "@material/menu/mdc-menu";
@@ -301,6 +302,32 @@ body {
 
 // Body Content Style
 
+// Image Lists
+// Laptops and Computers
+@media all and (min-width: 50em) {
+  .s-mdc-image-list {
+    @include mdc-image-list-standard-columns(5);
+  }
+}
+
+// Tablets
+@media all and (max-width: 49.99em) {
+  .s-mdc-image-list {
+    @include mdc-image-list-standard-columns(4);
+  }
+}
+
+// Smartphones
+@media all and (max-width: 39.99em) {
+  .s-mdc-image-list {
+    @include mdc-image-list-standard-columns(3);
+  }
+}
+
+.s-mdc-image-list__image {
+  cursor: pointer;
+}
+
 // Cards
 .s-mdc-card {
   display: flex;
@@ -338,6 +365,55 @@ body {
       margin: 0 0 1rem 0;
     }
   }
+}
+
+.s-article__text-mdc-card {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.s-mdc-card__article {
+  margin: 1rem;
+  width: 80%;
+}
+
+.s-mdc-card__media-content {
+  background-size: cover;
+}
+
+.s-mdc-card__headers {
+  justify-content: flex-start;
+  padding: 0.5rem 1.5rem;
+  text-align: start;
+
+  h3 {
+    color: gray;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+}
+
+.s-mdc-card__body {
+  justify-content: flex-start;
+  padding: 0.5rem 1.5rem;
+  text-align: justify;
+
+  h2 {
+    color: $mdc-theme-on-surface;
+    margin-top: 3rem;
+  }
+
+  ul {
+    padding: 0rem 1rem;
+
+    li {
+      padding-bottom: 0.5rem;
+    }
+  }
+}
+
+.s-mdc-card__body--hidden {
+  display: none;
 }
 
 .media-icon__backcolor-list {
