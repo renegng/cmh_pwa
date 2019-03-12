@@ -4177,7 +4177,8 @@ body {
 
 .s-article__text-mdc-card {
   display: flex;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
 
 .s-mdc-card__article {
   margin: 1rem;
