@@ -30,8 +30,8 @@ module.exports = [{
 },
 {
     entry: {
-        main: ["./static/js/swing_app.js"]
-        // main: ["./static/js/swing_app.js", "./sw.js"]
+        // main: ["./static/js/swing_app.js"]
+        main: ["./static/js/swing_app.js", "./static/js/swing_firebase.js"]
     },
     output: {
         path: __dirname + "/static/js",
@@ -40,6 +40,9 @@ module.exports = [{
     module: {
         loaders: [{
             test: /\.js$/,
+            // The following exclude is needed for FirebaseUI to work properly
+            // since it cannot detect de navigator property on the window DOM
+            exclude: /node_modules/,
             loader: 'babel-loader',
             query: {
                 presets: ['es2015']

@@ -10,6 +10,6 @@ def _landing_page():
 def _login_page():
     return render_template('login.html')
 
-# @home.route('/home/')
-# def _home():
-#     return render_template('home.html')
+@home.route('/home/')
+def _home():
+    return render_template('home.html')

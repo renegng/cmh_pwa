@@ -80,7 +80,7 @@ To install Swing CMS, follow the next steps (under Ubuntu 16.04):
 
 Proper credit for the following people/teams:
 - Apache HTTPD, web server that never fails.
-- Google's Material Design team, for making the web awesome!
+- Google's Material Design and Firebase team, for making the web awesome!
 - Polymer Project, for an amazing main HTML PWA Template structure.
 - Python, Flask, NodeJS, GitHub and everyone's amazing frameworks.
 - Traversy Media, for incredible tips & tricks overall.

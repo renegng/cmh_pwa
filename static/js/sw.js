@@ -9,6 +9,8 @@ const filesToCache = [
     '/direcciones/',
     '/direcciones/googlemaps/',
     '/noticias/',
+    '/politicaprivacidad/',
+    '/preguntasfrecuentes/',
     '/servicios/',
     '/servicios/maa/',
     '/servicios/mae/',
@@ -16,7 +18,7 @@ const filesToCache = [
     '/servicios/mec/',
     '/servicios/mssr/',
     '/servicios/mvcm/',
-    '/preguntasfrecuentes/',
+    '/terminosdeuso/',
     // Web assets
     'https://fonts.googleapis.com/icon?family=Material+Icons',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
@@ -40,7 +42,7 @@ const filesToCache = [
     '/static/media/audio/cmh_jingle.mp3'
 ];
 
-const genCacheName = 'generalCache-v2019-03-12-01';
+const genCacheName = 'generalCache-v2019-03-13-01';
 
 // Install Event
 self.addEventListener('install', event => {

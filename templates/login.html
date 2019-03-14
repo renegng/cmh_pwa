@@ -4,11 +4,12 @@
 {% block body %}
 <section class="s-maincontainer">
     <main class="s-content">
-        <section class="parallax parallax--small">
+        <section>
             <div class="parallax-caption">
                 <img src="../static/images/manifest/icon-192x192.png" alt="Big Picture">
-                <span class="parallax-caption--dark">Próximamente</span>
+                <span class="parallax-caption--dark">Inicia sesión</span>
             </div>
+            <div id="firebaseui-auth-container" class="firebase-auth-widget"></div>
         </section>
         <section class="parallax-div parallax-div--light">
             <h2>
@@ -28,9 +29,9 @@
                         de una de las siguientes opciones:
                         <ul class="mdc-list mdc-menu__items" role="menu" aria-hidden="true" aria-orientation="vertical">
                             <li class="mdc-list-item" role="menuitem" tabindex="0">
-                                <i class="classic-color-em material-icons mdc-list-item__graphic" aria-hidden="true">email</i>
+                                <i class="classic-color-gp mdc-list-item__graphic fa fa-google" aria-hidden="true"></i>
                                 <span class="mdc-list-item__text">
-                                    <span class="mdc-list-item__primary-text">Correo Electrónico</span>
+                                    <span class="mdc-list-item__primary-text">Google</span>
                                 </span>
                             </li>
                             <li role="separator" class="mdc-list-divider"></li>
@@ -42,11 +43,12 @@
                             </li>
                             <li role="separator" class="mdc-list-divider"></li>
                             <li class="mdc-list-item" role="menuitem" tabindex="0">
-                                <i class="classic-color-gp mdc-list-item__graphic fa fa-google" aria-hidden="true"></i>
+                                <i class="classic-color-em material-icons mdc-list-item__graphic" aria-hidden="true">email</i>
                                 <span class="mdc-list-item__text">
-                                    <span class="mdc-list-item__primary-text">Google</span>
+                                    <span class="mdc-list-item__primary-text">Correo Electrónico</span>
                                 </span>
                             </li>
+                            
                         </ul>
                     </p>
                 </div>

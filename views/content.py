@@ -22,6 +22,10 @@ def _direcciones_gm():
 def _noticias():
     return render_template('noticias.html')
 
+@content.route('/politicaprivacidad/')
+def _politicaprivacidad():
+    return render_template('politicaprivacidad.html')
+
 @content.route('/preguntasfrecuentes/')
 def _preguntasfrecuentes():
     return render_template('preguntasfrecuentes.html')
@@ -53,3 +57,7 @@ def _servicios_mec():
 @content.route('/servicios/mai/')
 def _servicios_mai():
     return render_template('servicios_mai.html')
+
+@content.route('/terminosdelservicio/')
+def _terminosdelservicio():
+    return render_template('terminosdelservicio.html')
