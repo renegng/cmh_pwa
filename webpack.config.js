@@ -31,7 +31,7 @@ module.exports = [{
 {
     entry: {
         // main: ["./static/js/swing_app.js"]
-        main: ["./static/js/swing_app.js", "./static/js/swing_firebase.js"]
+        main: ["./static/js/swing_app.js", "./static/js/swing_firebase-api-key.js", "./static/js/swing_firebase.js"]
     },
     output: {
         path: __dirname + "/static/js",

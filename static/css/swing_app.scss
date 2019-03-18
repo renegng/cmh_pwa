@@ -18,15 +18,20 @@ $swn-typography-parallax: 'Lato', sans-serif;
 @import "@material/card/mdc-card";
 @import "@material/drawer/mdc-drawer";
 @import "@material/fab/mdc-fab";
+@import "@material/floating-label/mdc-floating-label";
 @import "@material/image-list/mdc-image-list";
 @import "@material/layout-grid/mdc-layout-grid";
+@import "@material/line-ripple/mdc-line-ripple";
 @import "@material/list/mdc-list";
 @import "@material/menu/mdc-menu";
+@import "@material/notched-outline/mdc-notched-outline";
 @import "@material/snackbar/mdc-snackbar";
 @import "@material/tab/mdc-tab";
 @import "@material/tab-bar/mdc-tab-bar";
 @import "@material/tab-indicator/mdc-tab-indicator";
 @import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/textfield/helper-text/mdc-text-field-helper-text";
+@import "@material/textfield/mdc-text-field";
 @import "@material/toolbar/mdc-toolbar";
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/typography/mdc-typography";
@@ -1010,6 +1015,16 @@ body {
   }
 }
 
+// User Profile Picture
+.s-userprofilepic {
+  img {
+    border: 0.2rem groove $mdc-theme-primary;
+    border-radius: 50%;
+    object-fit: contain;
+    width: 12rem;
+  }
+}
+
 // Google Maps component
 .s-googlemaps__iframe {
   width: 100%;
@@ -1024,6 +1039,11 @@ body {
 // Material Design Components
 .mdc-menu-anchor {
   margin-right: 0.5rem;
+}
+
+.s-mdc-text-fields {
+  width: 50%;
+  @include mdc-text-field-ink-color(black);
 }
 
 .fab--absolute {

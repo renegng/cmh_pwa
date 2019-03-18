@@ -1,6 +1,9 @@
 // import AOS from 'aos';
+import { MDCFloatingLabel } from '@material/floating-label';
 import { MDCIconToggle } from '@material/icon-toggle';
+import { MDCLineRipple } from '@material/line-ripple';
 import { MDCMenu, Corner } from '@material/menu';
+import { MDCNotchedOutline } from '@material/notched-outline';
 import { MDCPersistentDrawer, MDCPersistentDrawerFoundation, MDCPermanentDrawer, MDCPermanentDrawerFoundation, MDCTemporaryDrawer, MDCTemporaryDrawerFoundation, util } from '@material/drawer';
 import { MDCRipple } from '@material/ripple';
 import { MDCSnackbar, MDCSnackbarFoundation } from '@material/snackbar';
@@ -8,6 +11,8 @@ import { MDCTab } from '@material/tab';
 import { MDCTabBar } from '@material/tab-bar';
 import { MDCTabIndicator } from '@material/tab-indicator';
 import { MDCTabScroller } from '@material/tab-scroller';
+import { MDCTextField } from '@material/textfield';
+import { MDCTextFieldHelperText } from '@material/textfield/helper-text';
 import { MDCTopAppBar } from '@material/top-app-bar/index';
 import { isNull } from 'util';
 
@@ -92,6 +97,31 @@ if (!isNull(document.querySelector('.mdc-tab-bar'))) {
     mdcTabScroller = new MDCTabScroller(document.querySelector('.mdc-tab-scroller'));
     document.querySelector('#mdc-tab-bar__id-noticias').addEventListener('MDCTabBar:activated', evt => showTabContent(evt));
 }
+
+// Material Floating Labels
+var mdcFloatingLabels = [].map.call(document.querySelectorAll('.mdc-floating-label'), function (el) {
+    return new MDCFloatingLabel(el);
+});
+
+// Material Line Ripples
+var mdcLineRipples = [].map.call(document.querySelectorAll('.mdc-line-ripple'), function (el) {
+    return new MDCLineRipple(el);
+});
+
+// Material Notched Ouline
+var mdcNotchedOutlines = [].map.call(document.querySelectorAll('.mdc-notched-outline'), function (el) {
+    return new MDCNotchedOutline(el);
+});
+
+// Material Textfields
+var mdcTextInputs = [].map.call(document.querySelectorAll('.mdc-text-field'), function (el) {
+    return new MDCTextField(el);
+});
+
+// Material Textfields Helper Text
+var mdcTFHelperTexts = [].map.call(document.querySelectorAll('.mdc-text-field-helper-text'), function (el) {
+    return new MDCTextFieldHelperText(el);
+});
 
 // Social Media Share Redirect
 // Applications URLs

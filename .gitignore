@@ -172,3 +172,6 @@ typings/
 
 # sass compile js placeholder
 static/css/compile_placeholder.js
+
+# firebase api key
+static/js/swing_firebase-api-key.js
