@@ -173,5 +173,5 @@ typings/
 # sass compiled js placeholder
 static/css/compile_placeholder.js
 
-# js bundle compiled file
+# js compiled bundle
 static/js/swing-bundle.js
