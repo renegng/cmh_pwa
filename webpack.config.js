@@ -42,7 +42,7 @@ module.exports = [{
             test: /\.js$/,
             // The following exclude is needed for FirebaseUI to work properly
             // since it cannot detect de navigator property on the window DOM
-            exclude: /node_modules/,
+            // exclude: /node_modules/,
             loader: 'babel-loader',
             query: {
                 presets: ['es2015']

@@ -319,16 +319,16 @@ if (!isNull(document.querySelector('.s-mdc-image-list__image'))) {
 // Even though this service worker is not on the root of this web application
 // It has been configured, through swing_main.py to make it look like it is.
 
-// if ('serviceWorker' in navigator) {
-//     navigator.serviceWorker.register('/sw.js', { scope: '/' })
-//         .then(reg => {
-//             // registration worked
-//             console.log('Service Worker Registered. Scope is ' + reg.scope);
-//         }).catch(error => {
-//             // registration failed
-//             console.log('Service Worker Registration Failed with ' + error);
-//         });
-// }
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js', { scope: '/' })
+        .then(reg => {
+            // registration worked
+            console.log('Service Worker Registered. Scope is ' + reg.scope);
+        }).catch(error => {
+            // registration failed
+            console.log('Service Worker Registration Failed with ' + error);
+        });
+}
 
 
 // Add to Homescreen (A2H) Event
