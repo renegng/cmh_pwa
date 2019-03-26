@@ -1015,7 +1015,14 @@ body {
   }
 }
 
-// User Profile Picture
+// User Profile
+.s-user-info {
+  .s-mdc-text-fields {
+    width: 25rem;
+    @include mdc-text-field-ink-color(black);
+  }
+}
+
 .s-userprofilepic {
   img {
     border: 0.2rem groove $mdc-theme-primary;
@@ -1039,11 +1046,6 @@ body {
 // Material Design Components
 .mdc-menu-anchor {
   margin-right: 0.5rem;
-}
-
-.s-mdc-text-fields {
-  width: 50%;
-  @include mdc-text-field-ink-color(black);
 }
 
 .fab--absolute {

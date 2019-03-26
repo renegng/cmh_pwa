@@ -3,7 +3,7 @@ from views.content import content as content_view
 from views.home import home as home_view
 from views.seo import seo as seo_view
 
-app = Flask(__name__)
+app = Flask(__name__, instance_relative_config=True)
 
 # Home
 app.register_blueprint(home_view)

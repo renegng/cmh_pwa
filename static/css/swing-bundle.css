@@ -5468,6 +5468,11 @@ body {
     width: 20rem;
     height: auto; } }
 
+.s-user-info .s-mdc-text-fields {
+  width: 25rem; }
+  .s-user-info .s-mdc-text-fields:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: black; }
+
 .s-userprofilepic img {
   border: 0.2rem groove #743a87;
   border-radius: 50%;
@@ -5483,11 +5488,6 @@ body {
 
 .mdc-menu-anchor {
   margin-right: 0.5rem; }
-
-.s-mdc-text-fields {
-  width: 50%; }
-  .s-mdc-text-fields:not(.mdc-text-field--disabled) .mdc-text-field__input {
-    color: black; }
 
 .fab--absolute {
   position: fixed;
