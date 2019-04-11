@@ -422,6 +422,23 @@ body {
   display: none;
 }
 
+.s-mdc-videocontainer__media--16-9 {
+  position:relative;
+	padding-bottom:56.25%;
+	height:0;
+	overflow:hidden;
+}
+
+.s-mdc-videocontainer__media--16-9 iframe,
+.s-mdc-videocontainer__media--16-9 object,
+.s-mdc-videocontainer__media--16-9 embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
 .media-icon__backcolor-list {
   background-color: #ff9932;
   color: $mdc-theme-on-primary;
