@@ -5083,6 +5083,10 @@ body {
   background-color: #d84315;
   color: #ffffff; }
 
+.media-icon__backcolor-lib {
+  background-color: #463A70;
+  color: #ffffff; }
+
 .media-icon__backcolor-docs {
   background-color: #6688A8;
   color: #ffffff; }
