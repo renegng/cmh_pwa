@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, redirect, url_for
 
 content = Blueprint('content', __name__, template_folder='templates', static_folder='static')
 
@@ -44,11 +44,15 @@ def _servicios_mssr():
 
 @content.route('/servicios/mvcm/')
 def _servicios_mvcm():
-    return render_template('servicios_mvcm.html')
+    return redirect(url_for('._servicios_maprodem'))
 
 @content.route('/servicios/maa/')
 def _servicios_maa():
     return render_template('servicios_maa.html')
+
+@content.route('/servicios/maprodem/')
+def _servicios_maprodem():
+    return render_template('servicios_maprodem.html')
 
 @content.route('/servicios/mec/')
 def _servicios_mec():

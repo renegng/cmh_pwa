@@ -381,6 +381,15 @@ body {
 .s-mdc-card__article {
   margin: 1rem;
   width: 80%;
+
+  .s-mdc-card__media-icon {
+    padding: 0.25rem;
+    text-align: center;
+
+    i {
+      font-size: 8rem;
+    }
+  }
 }
 
 .s-mdc-card__media-content {
@@ -420,6 +429,19 @@ body {
 
 .s-mdc-card__body--hidden {
   display: none;
+}
+
+.s-mdc-card__phones-list {
+  a {
+    color: inherit;
+    text-decoration: inherit;
+
+    .mdc-list-item__text {
+      white-space: normal;
+      text-overflow: ellipsis;
+      text-align: start;
+    }
+  }
 }
 
 .s-mdc-videocontainer__media--16-9 {
@@ -489,7 +511,7 @@ body {
   color: $mdc-theme-on-primary;
 }
 
-.media-icon__backcolor-mvcm {
+.media-icon__backcolor-maprodem {
   background-color: #743a87;
   color: $mdc-theme-on-primary;
 }
@@ -836,7 +858,7 @@ body {
       color: #4a7532;
     }
 
-    .mdc-list-item__graphic-mvcm {
+    .mdc-list-item__graphic-maprodem {
       color: #743a87;
     }
     
@@ -890,7 +912,7 @@ body {
   font-size: 8rem !important;
 }
 
-.s-article__graphic-mvcm {
+.s-article__graphic-maprodem {
   color: #743a87;
   font-size: 8rem !important;
 }

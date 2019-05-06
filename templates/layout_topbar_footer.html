@@ -12,7 +12,8 @@
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
             <div class="mdc-menu-anchor">
 
-                <button id="shareButton" class="material-icons mdc-top-app-bar__action-item" aria-label="Share" alt="Share">
+                <button id="shareButton" class="material-icons mdc-top-app-bar__action-item" aria-label="Share"
+                    alt="Share">
                     share
                 </button>
                 <!--                 
@@ -24,7 +25,8 @@
                 <div id="shareMenu" class="mdc-menu" tabindex="-1">
                     <ul class="mdc-list mdc-menu__items" role="menu" aria-hidden="true">
                         <li class="mdc-list-item" role="menuitem" tabindex="0">
-                            <i class="classic-color-em material-icons mdc-list-item__graphic" aria-hidden="true">email</i>
+                            <i class="classic-color-em material-icons mdc-list-item__graphic"
+                                aria-hidden="true">email</i>
                             Email
                         </li>
                         <li class="mdc-list-item" role="menuitem" tabindex="0">
@@ -52,7 +54,8 @@
                     </ul>
                 </div>
             </div>
-            <button id="loginButton" class="mdc-button mdc-button--outlined topAppBar-button" aria-label="Login" alt="Login">
+            <button id="loginButton" class="mdc-button mdc-button--outlined topAppBar-button" aria-label="Login"
+                alt="Login">
                 Login
             </button>
         </section>
@@ -66,7 +69,8 @@
             </div>
         </header>
         -->
-        <img id="logo-nav-drawer" src="{{ url_for('static', filename='images/manifest/logocmh_sin_texto.svg') }}" alt="Logo Ciudad Mujer Honduras" />
+        <img id="logo-nav-drawer" src="{{ url_for('static', filename='images/manifest/logocmh_sin_texto.svg') }}"
+            alt="Logo Ciudad Mujer Honduras" />
         <nav class="mdc-drawer__content mdc-list">
             <a class="mdc-list-item" href="/">
                 <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>Inicio
@@ -87,9 +91,11 @@
                 <i class="mdc-list-item__graphic fa fa-whatsapp" aria-hidden="true"></i>Centro de Atención WhatsApp
             </a>
             <a class="mdc-list-item" href="/preguntasfrecuentes/">
-                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">question_answer</i>Preguntas Frecuentes
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">question_answer</i>Preguntas
+                Frecuentes
             </a>
-            <a class="mdc-list-item" href="https://drive.google.com/open?id=18LWswNRXNYC-VkIvE86GHSoXwrzLk64B" target="_blank">
+            <a class="mdc-list-item" href="https://drive.google.com/open?id=18LWswNRXNYC-VkIvE86GHSoXwrzLk64B"
+                target="_blank">
                 <i class="material-icons mdc-list-item__graphic" aria-hidden="true">description</i>Documentos
             </a>
             <a class="mdc-list-item" href="http://www.dvcn.org/biblioteca-virtual-vcm.html" target="_blank">
@@ -106,10 +112,11 @@
     <h2>
         ¡Solo faltas tu!
     </h2>
-    <img id="logo-landing-page__bottom" src="{{ url_for('static', filename='images/manifest/logocmh_solo_texto.png') }}" alt="Logo Ciudad Mujer Honduras">
+    <img id="logo-landing-page__bottom" src="{{ url_for('static', filename='images/manifest/logocmh_solo_texto.png') }}"
+        alt="Logo Ciudad Mujer Honduras">
 </section>
-<button id="floatingButton" class="mdc-fab fab--absolute fab__whatsapp" aria-label="WhatsApp Contact Center" 
-        onclick="window.open('https://wa.me/50497396698');">
+<button id="floatingButton" class="mdc-fab fab--absolute fab__whatsapp" aria-label="WhatsApp Contact Center"
+    onclick="window.open('https://wa.me/50497396698');">
     <span class="mdc-fab__icon fa fa-whatsapp"></span>
 </button>
 <div class="mdc-snackbar mdc-snackbar--align-start" aria-live="assertive" aria-atomic="true" aria-hidden="true">
@@ -124,7 +131,8 @@
             Ciudad Mujer
         </div>
         <div class="footer-about__text">
-            Un nuevo eslabón que consolida y fortalece la política de estado hacia el desarrollo de la mujer Hondureña que ofrece servicios
+            Un nuevo eslabón que consolida y fortalece la política de estado hacia el desarrollo de la mujer Hondureña
+            que ofrece servicios
             de atención integral bajo un mismo techo para contribuir al mejoramiento de sus condiciones de vida.
         </div>
         <span class="footer-about__author">
@@ -176,9 +184,11 @@
                         Encuéntranos en Google Maps
                     </a>
                 </li>
-                <li class="mdc-list-item">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">phone</i>
-                    +504 9739 6698
+                <li class="mdc-list-item" itemscope itemtype="http://schema.org/LocalBusiness">
+                    <a href="tel:+50497396698" target="_blank" rel="external">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">phone</i>
+                        <span itemprop="telephone">+504 9739 6698</span>
+                    </a>
                 </li>
                 <li class="mdc-list-item">
                     <a href="mailto:info@ciudadmujer.gob.hn" target="_blank" rel="external">

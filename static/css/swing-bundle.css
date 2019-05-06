@@ -5024,6 +5024,11 @@ body {
 .s-mdc-card__article {
   margin: 1rem;
   width: 80%; }
+  .s-mdc-card__article .s-mdc-card__media-icon {
+    padding: 0.25rem;
+    text-align: center; }
+    .s-mdc-card__article .s-mdc-card__media-icon i {
+      font-size: 8rem; }
 
 .s-mdc-card__media-content {
   background-size: cover; }
@@ -5051,6 +5056,14 @@ body {
 
 .s-mdc-card__body--hidden {
   display: none; }
+
+.s-mdc-card__phones-list a {
+  color: inherit;
+  text-decoration: inherit; }
+  .s-mdc-card__phones-list a .mdc-list-item__text {
+    white-space: normal;
+    text-overflow: ellipsis;
+    text-align: start; }
 
 .s-mdc-videocontainer__media--16-9 {
   position: relative;
@@ -5107,7 +5120,7 @@ body {
   background-color: #4a7532;
   color: #ffffff; }
 
-.media-icon__backcolor-mvcm {
+.media-icon__backcolor-maprodem {
   background-color: #743a87;
   color: #ffffff; }
 
@@ -5349,7 +5362,7 @@ body {
       color: #c96b0f; }
     .s-article__list .mdc-list-item .mdc-list-item__graphic-mssr {
       color: #4a7532; }
-    .s-article__list .mdc-list-item .mdc-list-item__graphic-mvcm {
+    .s-article__list .mdc-list-item .mdc-list-item__graphic-maprodem {
       color: #743a87; }
     .s-article__list .mdc-list-item .mdc-list-item__graphic-maa {
       color: #dec425; }
@@ -5382,7 +5395,7 @@ body {
   color: #4a7532;
   font-size: 8rem !important; }
 
-.s-article__graphic-mvcm {
+.s-article__graphic-maprodem {
   color: #743a87;
   font-size: 8rem !important; }
 
