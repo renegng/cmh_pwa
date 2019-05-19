@@ -42,7 +42,7 @@ const filesToCache = [
     '/static/media/audio/cmh_jingle.mp3'
 ];
 
-const genCacheName = 'cmhpwaGenCache-v2019-05-05-01';
+const genCacheName = 'cmhpwaGenCache-v2019-05-19-01';
 
 // Install Event
 self.addEventListener('install', event => {
