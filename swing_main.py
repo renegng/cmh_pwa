@@ -3,7 +3,11 @@ from views.content import content as content_view
 from views.home import home as home_view
 from views.seo import seo as seo_view
 
+# Enables Instance Folder Configuration (instance_relative_config=True) 
 app = Flask(__name__, instance_relative_config=True)
+
+# Configuration File From Instance Folder
+app.config.from_pyfile('config.py')
 
 # Home
 app.register_blueprint(home_view)
