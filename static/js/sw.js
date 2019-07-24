@@ -50,7 +50,7 @@ workbox.setConfig({ debug: false });
 // Configuring Workbox
 workbox.core.setCacheNameDetails({
     prefix: 'cmh-pwa',
-    suffix: 'v2019-05-28-1',
+    suffix: 'v2019-07-23-1',
     precache: 'pre-cache',
     runtime: 'run-time',
     googleAnalytics: 'ga',
