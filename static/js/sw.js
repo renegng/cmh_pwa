@@ -6,7 +6,7 @@ const filesToPreCache = [
     // Web pages
     { url: '/', revision: '2019-05-28-1' },
     { url: '/acercade/', revision: '2019-05-28-1' },
-    { url: '/direcciones/', revision: '2019-05-28-1' },
+    { url: '/direcciones/', revision: '2019-07-31-1' },
     { url: '/direcciones/googlemaps/', revision: '2019-05-28-1' },
     { url: '/noticias/', revision: '2019-07-26-1' },
     { url: '/politicaprivacidad/', revision: '2019-05-28-1' },
@@ -22,6 +22,8 @@ const filesToPreCache = [
     // Images
     { url: '/static/images/assets/ccm/cmh_choloma.jpg', revision: '2019-05-28-1' },
     { url: '/static/images/assets/ccm/cmh_kennedy.jpg', revision: '2019-05-28-1' },
+    { url: '/static/images/assets/ccm/cmh_laceiba.jpg', revision: '2019-07-31-1' },
+    { url: '/static/images/assets/ccm/cmh_sanpedrosula.jpg', revision: '2019-07-31-1' },
     { url: '/static/images/assets/ccm/cmh_movil.jpg', revision: '2019-05-28-1' },
     { url: '/static/images/assets/ciudadmujer/cmh_02_bg.jpg', revision: '2019-05-28-1' },
     { url: '/static/images/assets/ciudadmujer/cmh_06_bg.jpg', revision: '2019-05-28-1' },
