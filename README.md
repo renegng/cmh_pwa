@@ -88,5 +88,6 @@ Proper credit for the following people/teams:
 - Polymer Project, for an amazing main HTML PWA Template structure.
 - Python, Flask, NodeJS, SQLAlchemy, Marshmallow, GitHub and everyone's amazing frameworks.
 - Traversy Media, for incredible tips & tricks overall.
+- aFarkas lazysizes, for being an amazing loading optimization library.
 - Visual Studio Code, for an incredible IDE.
 - Ubuntu team, stable OS to work on.
