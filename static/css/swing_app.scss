@@ -560,7 +560,6 @@ body {
       position: absolute;
       filter: drop-shadow(0.06rem 0.06rem 0.12rem);
     }
-
     #logo-landing-page__top-text {
       bottom: 0;
       position: absolute;
@@ -600,7 +599,6 @@ body {
       position: absolute;
       filter: drop-shadow(0.06rem 0.06rem 0.12rem);
     }
-
     #logo-landing-page__top-text {
       bottom: 0;
       position: absolute;
@@ -642,7 +640,6 @@ body {
       position: absolute;
       filter: drop-shadow(0.06rem 0.06rem 0.12rem);
     }
-
     #logo-landing-page__top-text {
       bottom: 0;
       position: absolute;
@@ -666,6 +663,15 @@ body {
 
 .parallax--small {
   height: 50vh;
+}
+
+.parallax--banner {
+  height: 20vh;
+  margin: 1rem;
+}
+
+.parallax--banner__link {
+  text-decoration: none;
 }
 
 .parallax-caption--dark {

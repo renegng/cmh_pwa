@@ -5236,6 +5236,13 @@ body {
 .parallax--small {
   height: 50vh; }
 
+.parallax--banner {
+  height: 20vh;
+  margin: 1rem; }
+
+.parallax--banner__link {
+  text-decoration: none; }
+
 .parallax-caption--dark {
   padding: 2rem;
   color: #fffbfa;
