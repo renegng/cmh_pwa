@@ -5092,6 +5092,10 @@ body {
   background-color: #29b6f6;
   color: #ffffff; }
 
+.media-icon__backcolor-library {
+  background-color: #1fab89;
+  color: #ffffff; }
+
 .media-icon__backcolor-faq {
   background-color: #d84315;
   color: #ffffff; }

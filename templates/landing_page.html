@@ -1,11 +1,14 @@
-{% extends 'layout_topbar_footer.html' %} {% block page_description %}Ciudad Mujer Honduras, ¡Un lugar de oportunidades para ti!{%
+{% extends 'layout_topbar_footer.html' %} {% block page_description %}Ciudad Mujer Honduras, ¡Un lugar de oportunidades
+para ti!{%
 endblock %} {% block page_title %}Ciudad Mujer Honduras{% endblock %} {% block body %}
 <section class="s-maincontainer s-maincontainer__landing">
     <main class="s-content">
-        <section id="landing-img-carousel" class="parallax parallax--medium img-transition-fadein" 
-                 style="background-image: url(../static/images/assets/ciudadmujer/cmh_02_bg.jpg);">
+        <section id="landing-img-carousel" class="parallax parallax--medium img-transition-fadein"
+            style="background-image: url(../static/images/assets/ciudadmujer/cmh_02_bg.jpg);">
             <div class="parallax-caption">
-                <img id="logo-landing-page__top" src="{{ url_for('static', filename='images/manifest/logocmh_con_texto.svg') }}" alt="Logo Ciudad Mujer Honduras">
+                <img id="logo-landing-page__top"
+                    src="{{ url_for('static', filename='images/manifest/logocmh_con_texto.svg') }}"
+                    alt="Logo Ciudad Mujer Honduras">
                 <span id="logo-landing-page__top-text" class="parallax-caption--dark">
                     ¡Un lugar de oportunidades para ti!
                 </span>
@@ -17,13 +20,6 @@ endblock %} {% block page_title %}Ciudad Mujer Honduras{% endblock %} {% block b
                 </button>
             </div>
         </section>
-        <a class="parallax--banner__link" href="https://drive.google.com/file/d/1I46NGPTo8iLab7yv5g7-jNwjlvvFhH1S/view?usp=sharing" target="_blank">
-            <section class="parallax parallax--banner" style="background-image: url(../static/images/banners/2019_08_06/boletin_05-12Ago2019.jpg);">
-                <div class="parallax-caption">
-                    <span class="parallax-caption--light">Descargar Boletín 07/2019</span>
-                </div>
-            </section>
-        </a>
         <section class="parallax-div parallax-div--light">
             <h2>
                 ¿Que necesitas?
@@ -40,7 +36,8 @@ endblock %} {% block page_title %}Ciudad Mujer Honduras{% endblock %} {% block b
                         </div>
                         <div class="s-mdc-card__primary">
                             <h2 class="s-mdc-card__title mdc-typography--headline6">Servicios</h2>
-                            <h3 class="s-mdc-card__subtitle mdc-typography--subtitle2">Información de los servicios Ciudad Mujer</h3>
+                            <h3 class="s-mdc-card__subtitle mdc-typography--subtitle2">Información de los servicios
+                                Ciudad Mujer</h3>
                         </div>
                     </div>
                 </a>
@@ -55,7 +52,23 @@ endblock %} {% block page_title %}Ciudad Mujer Honduras{% endblock %} {% block b
                         </div>
                         <div class="s-mdc-card__primary">
                             <h2 class="s-mdc-card__title mdc-typography--headline6">Cómo llegar</h2>
-                            <h3 class="s-mdc-card__subtitle mdc-typography--subtitle2">Mi centro de Ciudad Mujer más cercano</h3>
+                            <h3 class="s-mdc-card__subtitle mdc-typography--subtitle2">Mi centro de Ciudad Mujer más
+                                cercano</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="mdc-card s-mdc-card__unit">
+                <a class="s-mdc-card__unit-link" href="https://drive.google.com/file/d/1I46NGPTo8iLab7yv5g7-jNwjlvvFhH1S/view?usp=sharing" target="_blank">
+                    <div class="mdc-card__primary-action" tabindex="0">
+                        <div class="mdc-card__media">
+                            <div class="s-mdc-card__media-icon media-icon__backcolor-library">
+                                <i class="material-icons" aria-hidden="true">local_library</i>
+                            </div>
+                        </div>
+                        <div class="s-mdc-card__primary">
+                            <h2 class="s-mdc-card__title mdc-typography--headline6">Boletín Informativo</h2>
+                            <h3 class="s-mdc-card__subtitle mdc-typography--subtitle2">Descarga nuestro boletín mensual</h3>
                         </div>
                     </div>
                 </a>
@@ -70,7 +83,8 @@ endblock %} {% block page_title %}Ciudad Mujer Honduras{% endblock %} {% block b
                         </div>
                         <div class="s-mdc-card__primary">
                             <h2 class="s-mdc-card__title mdc-typography--headline6">Conoce lo último</h2>
-                            <h3 class="s-mdc-card__subtitle mdc-typography--subtitle2">Noticias, anuncios y redes sociales</h3>
+                            <h3 class="s-mdc-card__subtitle mdc-typography--subtitle2">Noticias, anuncios y redes
+                                sociales</h3>
                         </div>
                     </div>
                 </a>
@@ -85,7 +99,8 @@ endblock %} {% block page_title %}Ciudad Mujer Honduras{% endblock %} {% block b
                         </div>
                         <div class="s-mdc-card__primary">
                             <h2 class="s-mdc-card__title mdc-typography--headline6">Mi Ciudad Mujer</h2>
-                            <h3 class="s-mdc-card__subtitle mdc-typography--subtitle2">Perfil de usuario y notificaciones</h3>
+                            <h3 class="s-mdc-card__subtitle mdc-typography--subtitle2">Perfil de usuario y
+                                notificaciones</h3>
                         </div>
                     </div>
                 </a>
@@ -106,7 +121,8 @@ endblock %} {% block page_title %}Ciudad Mujer Honduras{% endblock %} {% block b
                 </a>
             </div>
             <div class="mdc-card s-mdc-card__unit">
-                <a class="s-mdc-card__unit-link" href="https://drive.google.com/open?id=18LWswNRXNYC-VkIvE86GHSoXwrzLk64B" target="_blank">
+                <a class="s-mdc-card__unit-link"
+                    href="https://drive.google.com/open?id=18LWswNRXNYC-VkIvE86GHSoXwrzLk64B" target="_blank">
                     <div class="mdc-card__primary-action" tabindex="0">
                         <div class="mdc-card__media">
                             <div class="s-mdc-card__media-icon media-icon__backcolor-docs">
@@ -115,7 +131,8 @@ endblock %} {% block page_title %}Ciudad Mujer Honduras{% endblock %} {% block b
                         </div>
                         <div class="s-mdc-card__primary">
                             <h2 class="s-mdc-card__title mdc-typography--headline6">Documentos</h2>
-                            <h3 class="s-mdc-card__subtitle mdc-typography--subtitle2">Documentación sobre el programa</h3>
+                            <h3 class="s-mdc-card__subtitle mdc-typography--subtitle2">Documentación sobre el programa
+                            </h3>
                         </div>
                     </div>
                 </a>
@@ -130,7 +147,8 @@ endblock %} {% block page_title %}Ciudad Mujer Honduras{% endblock %} {% block b
                         </div>
                         <div class="s-mdc-card__primary">
                             <h2 class="s-mdc-card__title mdc-typography--headline6">Biblioteca Virtual</h2>
-                            <h3 class="s-mdc-card__subtitle mdc-typography--subtitle2">Sistemas de Referencia para casos de Violencia Contra la Mujer</h3>
+                            <h3 class="s-mdc-card__subtitle mdc-typography--subtitle2">Sistemas de Referencia para casos
+                                de Violencia Contra la Mujer</h3>
                         </div>
                     </div>
                 </a>
