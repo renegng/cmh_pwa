@@ -8,7 +8,7 @@ const filesToPreCache = [
     { url: '/acercade/', revision: '2019-05-28-1' },
     { url: '/direcciones/', revision: '2019-09-05-1' },
     { url: '/direcciones/googlemaps/', revision: '2019-05-28-1' },
-    { url: '/noticias/', revision: '2019-09-19-1' },
+    { url: '/noticias/', revision: '2019-11-15-1' },
     { url: '/politicaprivacidad/', revision: '2019-05-28-1' },
     { url: '/preguntasfrecuentes/', revision: '2019-05-28-1' },
     { url: '/servicios/', revision: '2019-05-28-1' },
