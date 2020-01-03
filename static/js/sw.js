@@ -4,7 +4,7 @@
 
 const filesToPreCache = [
     // Web pages
-    { url: '/', revision: '2019-12-04-1' },
+    { url: '/', revision: '2020-01-03-1' },
     { url: '/acercade/', revision: '2019-05-28-1' },
     { url: '/direcciones/', revision: '2019-12-18-1' },
     { url: '/direcciones/googlemaps/', revision: '2019-05-28-1' },
