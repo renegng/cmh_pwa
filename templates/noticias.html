@@ -16,8 +16,8 @@
                         <div class="mdc-tab-scroller__scroll-content">
                             <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
                                 <span class="mdc-tab__content">
-                                    <i class="mdc-tab__icon fa fa-facebook" aria-hidden="true"></i>
-                                    <span class="mdc-tab__text-label">Facebook</span>
+                                    <span class="mdc-tab__icon material-icons" aria-hidden="true">new_releases</span>
+                                    <span class="mdc-tab__text-label">Noticias</span>
                                 </span>
                                 <span class="mdc-tab-indicator mdc-tab-indicator--active">
                                     <span
@@ -26,6 +26,17 @@
                                 <span class="mdc-tab__ripple"></span>
                             </button>
                             <button class="mdc-tab" role="tab" tabindex="1">
+                                <span class="mdc-tab__content">
+                                    <i class="mdc-tab__icon fa fa-facebook" aria-hidden="true"></i>
+                                    <span class="mdc-tab__text-label">Facebook</span>
+                                </span>
+                                <span class="mdc-tab-indicator">
+                                    <span
+                                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                </span>
+                                <span class="mdc-tab__ripple"></span>
+                            </button>
+                            <button class="mdc-tab" role="tab" tabindex="2">
                                 <span class="mdc-tab__content">
                                     <i class="mdc-tab__icon fa fa-twitter" aria-hidden="true"></i>
                                     <span class="mdc-tab__text-label">Twitter</span>
@@ -36,21 +47,10 @@
                                 </span>
                                 <span class="mdc-tab__ripple"></span>
                             </button>
-                            <button class="mdc-tab" role="tab" tabindex="2">
+                            <button class="mdc-tab" role="tab" tabindex="3">
                                 <span class="mdc-tab__content">
                                     <i class="mdc-tab__icon fa fa-linkedin" aria-hidden="true"></i>
                                     <span class="mdc-tab__text-label">LinkedIn</span>
-                                </span>
-                                <span class="mdc-tab-indicator">
-                                    <span
-                                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                </span>
-                                <span class="mdc-tab__ripple"></span>
-                            </button>
-                            <button class="mdc-tab" role="tab" tabindex="3">
-                                <span class="mdc-tab__content">
-                                    <span class="mdc-tab__icon material-icons" aria-hidden="true">new_releases</span>
-                                    <span class="mdc-tab__text-label">Noticias</span>
                                 </span>
                                 <span class="mdc-tab-indicator">
                                     <span
@@ -63,26 +63,241 @@
                 </div>
             </section>
             <section id="mdc-tab-bar__id-noticias-content">
-                <section class="s-article__text s-article__text--centered s-article__text--show" tabindex="0">
-                    <iframe
-                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fciudadmujerhn&tabs=timeline%2C%20events&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                        width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                        allowTransparency="true" allow="encrypted-media"></iframe>
-                </section>
-                <section class="s-article__text s-article__text--centered s-article__text--hidden" tabindex="1">
-                    <a class="twitter-timeline" data-width="340" data-height="500"
-                        href="https://twitter.com/ciudadmujerhn?ref_src=twsrc%5Etfw">Tweets
-                        por ciudadmujerhn</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </section>
-                <section class="s-article__text s-article__text--centered s-article__text--hidden" tabindex="2">
-                    <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
-                    <!-- <script type="IN/CompanyProfile" data-id="33278832" data-format="inline" data-related="false"></script> -->
-                    <script type="IN/JYMBII" data-format="inline" data-width="600"></script>
-                </section>
                 <section
-                    class="s-article__text s-article__text--centered s-article__text-mdc-card s-article__text--hidden"
-                    tabindex="3">
+                    class="s-article__text s-article__text--centered s-article__text-mdc-card s-article__text--show"
+                    tabindex="0">
+                    <div class="mdc-card s-mdc-card__article">
+                        <div class="mdc-card__primary-action">
+                            <div class="mdc-card__media mdc-card__media--16-9 s-mdc-card__media-content"
+                                style="background: url({{ url_for('static', filename='images/articles/2020_02_04-02/01.jpg') }}); background-size: cover;">
+                            </div>
+                            <div class="s-mdc-card__headers">
+                                <h2>
+                                    Resumen de actividades Centro Ciudad Mujer Choloma
+                                </h2>
+                                <h3>
+                                    Nota de Prensa (del 27 al 31 de Enero 2020)
+                                </h3>
+                            </div>
+                            <div class="s-mdc-card__body">
+                                <p>
+                                    <b>Curso de elaboración de bolsos</b>:<br />
+                                    Con una variada exposición de coloridos bolsos culminó este curso que tuvo como
+                                    objetivo la creación de carteras reutilizando los pantalones jeans de mezclilla y
+                                    agregando detalles con trozos de tela sin uso.
+                                </p>
+                                <div id="RMC-2020_02_04-02" class="s-mdc-card__body--hidden">
+                                    <p>
+                                        <b>Capacitación</b>:<br />
+                                        Con el propósito de facilitarles un método fácil de propagación en variedad de
+                                        plantas, se impartió a las usuarias una capacitación en la elaboración de acodos
+                                        en virgíneas. Varias de las participantes ya sembraron en su hogar.
+                                    </p>
+                                    <h2>
+                                        Fotografías
+                                    </h2>
+                                    <ul class="mdc-image-list mdc-image-list s-mdc-image-list">
+                                        <li class="mdc-image-list__item">
+                                            <div class="mdc-image-list__image-aspect-container">
+                                                <img class="mdc-image-list__image s-mdc-image-list__image lazyload"
+                                                    data-src="{{ url_for('static', filename='images/articles/2020_02_04-02/01.jpg') }}">
+                                            </div>
+                                        </li>
+                                        <li class="mdc-image-list__item">
+                                            <div class="mdc-image-list__image-aspect-container">
+                                                <img class="mdc-image-list__image s-mdc-image-list__image lazyload"
+                                                    data-src="{{ url_for('static', filename='images/articles/2020_02_04-02/02.jpg') }}">
+                                            </div>
+                                        </li>
+                                        <li class="mdc-image-list__item">
+                                            <div class="mdc-image-list__image-aspect-container">
+                                                <img class="mdc-image-list__image s-mdc-image-list__image lazyload"
+                                                    data-src="{{ url_for('static', filename='images/articles/2020_02_04-02/03.jpg') }}">
+                                            </div>
+                                        </li>
+                                        <li class="mdc-image-list__item">
+                                            <div class="mdc-image-list__image-aspect-container">
+                                                <img class="mdc-image-list__image s-mdc-image-list__image lazyload"
+                                                    data-src="{{ url_for('static', filename='images/articles/2020_02_04-02/04.jpg') }}">
+                                            </div>
+                                        </li>
+                                        <li class="mdc-image-list__item">
+                                            <div class="mdc-image-list__image-aspect-container">
+                                                <img class="mdc-image-list__image s-mdc-image-list__image lazyload"
+                                                    data-src="{{ url_for('static', filename='images/articles/2020_02_04-02/05.jpg') }}">
+                                            </div>
+                                        </li>
+                                        <li class="mdc-image-list__item">
+                                            <div class="mdc-image-list__image-aspect-container">
+                                                <img class="mdc-image-list__image s-mdc-image-list__image lazyload"
+                                                    data-src="{{ url_for('static', filename='images/articles/2020_02_04-02/06.jpg') }}">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdc-card__actions">
+                            <button id="2020_02_04-02" class="mdc-button mdc-card__action mdc-card__action--button">
+                                <span class="mdc-button__label">Leer más...</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mdc-card s-mdc-card__article">
+                        <div class="mdc-card__primary-action">
+                            <div class="mdc-card__media mdc-card__media--16-9 s-mdc-card__media-content"
+                                style="background: url({{ url_for('static', filename='images/articles/2020_02_04-01/04.jpg') }}); background-size: cover;">
+                            </div>
+                            <div class="s-mdc-card__headers">
+                                <h2>
+                                    Resumen de actividades Centro Ciudad Mujer Móvil
+                                </h2>
+                                <h3>
+                                    Nota de Prensa (del 27 al 31 de Enero 2020)
+                                </h3>
+                            </div>
+                            <div class="s-mdc-card__body">
+                                <p>
+                                    ¡Ciudad Mujer Móvil llegó a La Gran Villa, Villanueva, Cortés!
+                                </p>
+                                <div id="RMC-2020_02_04-01" class="s-mdc-card__body--hidden">
+                                    <p>
+                                        Brindando atención de calidad y con calidez a más de 100 mujeres. Las féminas
+                                        recibieron atención en medicina general, atención ginecológica, charlas sobre la
+                                        importancia de la autoestima, aplicación de vacunas y pruebas rápidas de VIH.
+                                    </p>
+                                    <p>
+                                        ¡Esperanza para la mujer hondureña!
+                                    </p>
+                                    <h2>
+                                        Fotografías
+                                    </h2>
+                                    <ul class="mdc-image-list mdc-image-list s-mdc-image-list">
+                                        <li class="mdc-image-list__item">
+                                            <div class="mdc-image-list__image-aspect-container">
+                                                <img class="mdc-image-list__image s-mdc-image-list__image lazyload"
+                                                    data-src="{{ url_for('static', filename='images/articles/2020_02_04-01/01.jpg') }}">
+                                            </div>
+                                        </li>
+                                        <li class="mdc-image-list__item">
+                                            <div class="mdc-image-list__image-aspect-container">
+                                                <img class="mdc-image-list__image s-mdc-image-list__image lazyload"
+                                                    data-src="{{ url_for('static', filename='images/articles/2020_02_04-01/02.jpg') }}">
+                                            </div>
+                                        </li>
+                                        <li class="mdc-image-list__item">
+                                            <div class="mdc-image-list__image-aspect-container">
+                                                <img class="mdc-image-list__image s-mdc-image-list__image lazyload"
+                                                    data-src="{{ url_for('static', filename='images/articles/2020_02_04-01/03.jpg') }}">
+                                            </div>
+                                        </li>
+                                        <li class="mdc-image-list__item">
+                                            <div class="mdc-image-list__image-aspect-container">
+                                                <img class="mdc-image-list__image s-mdc-image-list__image lazyload"
+                                                    data-src="{{ url_for('static', filename='images/articles/2020_02_04-01/04.jpg') }}">
+                                            </div>
+                                        </li>
+                                        <li class="mdc-image-list__item">
+                                            <div class="mdc-image-list__image-aspect-container">
+                                                <img class="mdc-image-list__image s-mdc-image-list__image lazyload"
+                                                    data-src="{{ url_for('static', filename='images/articles/2020_02_04-01/05.jpg') }}">
+                                            </div>
+                                        </li>
+                                        <li class="mdc-image-list__item">
+                                            <div class="mdc-image-list__image-aspect-container">
+                                                <img class="mdc-image-list__image s-mdc-image-list__image lazyload"
+                                                    data-src="{{ url_for('static', filename='images/articles/2020_02_04-01/06.jpg') }}">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdc-card__actions">
+                            <button id="2020_02_04-01" class="mdc-button mdc-card__action mdc-card__action--button">
+                                <span class="mdc-button__label">Leer más...</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mdc-card s-mdc-card__article">
+                        <div class="mdc-card__primary-action">
+                            <div class="mdc-card__media mdc-card__media--16-9 s-mdc-card__media-content"
+                                style="background: url({{ url_for('static', filename='images/articles/2020_02_04/04.jpg') }}); background-size: cover;">
+                            </div>
+                            <div class="s-mdc-card__headers">
+                                <h2>
+                                    Resumen de actividades Centro Ciudad Mujer La Ceiba
+                                </h2>
+                                <h3>
+                                    Nota de Prensa (del 27 al 31 de Enero 2020)
+                                </h3>
+                            </div>
+                            <div class="s-mdc-card__body">
+                                <p>
+                                    <b>Charlas</b>:<br />
+                                    Se impartió una charla informativa a las usuarias sobre los servicios que se brindan
+                                    en el Módulo de Salud Sexual y Reproductiva.
+                                </p>
+                                <div id="RMC-2020_02_04" class="s-mdc-card__body--hidden">
+                                    <p>
+                                        <b>"Ven y ponte en forma"</b>:<br />
+                                        Las usuarias participaron en una ronda de ejercicios aeróbicos y de tonificación
+                                        muscular.
+                                    </p>
+                                    <p>
+                                        <b>"Manejo saludable del estrés"</b>:<br />
+                                        Nuestras usuarias conocieron cuáles son las causas del estrés y técnicas
+                                        saludables de prevención.
+                                    </p>
+                                    <p>
+                                        <b>Charla Preventiva</b>:<br />
+                                        Usuarias se mostraron interesadas sobre la hipertensión arterial y cómo afecta
+                                        al cuerpo, cuáles son los factores de riesgo y plan de acción para evitarlo.
+                                    </p>
+                                    <p>
+                                        <b>Autoexamen de mamas</b>:<br />
+                                        Gracias a este taller nuestras usuarias conocieron cómo realizarse el autoexamen
+                                        de mama, señales de alerta, cada cuánto se debe realizar el examen y la
+                                        importancia de complementarla con la mamografía anual.
+                                    </p>
+                                    <h2>
+                                        Fotografías
+                                    </h2>
+                                    <ul class="mdc-image-list mdc-image-list s-mdc-image-list">
+                                        <li class="mdc-image-list__item">
+                                            <div class="mdc-image-list__image-aspect-container">
+                                                <img class="mdc-image-list__image s-mdc-image-list__image lazyload"
+                                                    data-src="{{ url_for('static', filename='images/articles/2020_02_04/01.jpg') }}">
+                                            </div>
+                                        </li>
+                                        <li class="mdc-image-list__item">
+                                            <div class="mdc-image-list__image-aspect-container">
+                                                <img class="mdc-image-list__image s-mdc-image-list__image lazyload"
+                                                    data-src="{{ url_for('static', filename='images/articles/2020_02_04/02.jpg') }}">
+                                            </div>
+                                        </li>
+                                        <li class="mdc-image-list__item">
+                                            <div class="mdc-image-list__image-aspect-container">
+                                                <img class="mdc-image-list__image s-mdc-image-list__image lazyload"
+                                                    data-src="{{ url_for('static', filename='images/articles/2020_02_04/03.jpg') }}">
+                                            </div>
+                                        </li>
+                                        <li class="mdc-image-list__item">
+                                            <div class="mdc-image-list__image-aspect-container">
+                                                <img class="mdc-image-list__image s-mdc-image-list__image lazyload"
+                                                    data-src="{{ url_for('static', filename='images/articles/2020_02_04/04.jpg') }}">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdc-card__actions">
+                            <button id="2020_02_04" class="mdc-button mdc-card__action mdc-card__action--button">
+                                <span class="mdc-button__label">Leer más...</span>
+                            </button>
+                        </div>
+                    </div>
                     <div class="mdc-card s-mdc-card__article">
                         <div class="mdc-card__primary-action">
                             <div class="mdc-card__media mdc-card__media--16-9 s-mdc-card__media-content"
@@ -3643,6 +3858,23 @@
                             </button>
                         </div>
                     </div>
+                </section>
+                <section class="s-article__text s-article__text--centered s-article__text--hidden" tabindex="1">
+                    <iframe
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fciudadmujerhn&tabs=timeline%2C%20events&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                        width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                        allowTransparency="true" allow="encrypted-media"></iframe>
+                </section>
+                <section class="s-article__text s-article__text--centered s-article__text--hidden" tabindex="2">
+                    <a class="twitter-timeline" data-width="340" data-height="500"
+                        href="https://twitter.com/ciudadmujerhn?ref_src=twsrc%5Etfw">Tweets
+                        por ciudadmujerhn</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </section>
+                <section class="s-article__text s-article__text--centered s-article__text--hidden" tabindex="3">
+                    <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: es_HN</script>
+                    <!-- <script type="IN/CompanyProfile" data-id="33278832" data-format="inline" data-related="false"></script> -->
+                    <script type="IN/FollowCompany" data-id="33278832" data-counter="bottom"></script>
                 </section>
             </section>
         </article>
