@@ -5030,6 +5030,11 @@ body {
     .s-mdc-card__article .s-mdc-card__media-icon i {
       font-size: 8rem; }
 
+.s-mdc-card__landpage {
+  display: inline-flex;
+  margin: 1rem;
+  width: 80%; }
+
 .s-mdc-card__media-content {
   background-size: cover; }
 
@@ -5264,7 +5269,7 @@ body {
 .parallax-div {
   font-family: "Lato", sans-serif;
   text-align: center;
-  padding: 0.5rem 4rem; }
+  padding: 0.5rem 2rem; }
   .parallax-div h1 {
     text-transform: uppercase;
     font-weight: bold;
