@@ -4,7 +4,7 @@
 
 const filesToPreCache = [
     // Web pages
-    { url: '/', revision: '2020-03-12-1' },
+    { url: '/', revision: '2020-03-12-2' },
     { url: '/acercade/', revision: '2019-05-28-1' },
     { url: '/direcciones/', revision: '2019-12-18-1' },
     { url: '/direcciones/googlemaps/', revision: '2019-05-28-1' },
@@ -59,7 +59,7 @@ workbox.core.clientsClaim();
 // Configuring Workbox
 workbox.core.setCacheNameDetails({
     prefix: 'cmh-pwa',
-    suffix: 'v2020-03-12-1',
+    suffix: 'v2020-03-12-2',
     precache: 'pre-cache',
     runtime: 'run-time',
     googleAnalytics: 'ga',
@@ -93,7 +93,7 @@ workbox.routing.registerRoute(
     new workbox.strategies.StaleWhileRevalidate({
         cacheName: 'cmh-pwa-img',
         plugins: [
-            new workbox.expiration.Plugin({
+            new ExpirationPlugin({
                 // Keep at most 60 entries.
                 maxEntries: 60,
                 // Don't keep any entries for more than 30 days.

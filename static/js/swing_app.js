@@ -362,7 +362,7 @@ var installSBDataObj = {
 
 // Snackbar Data for Update Website Event
 var updateSBDataObj = {
-    message: 'Nuevo contenido disponible. Click OK para actualizar.',
+    message: '¡Nuevo contenido disponible!. Click OK para actualizar.',
     actionText: 'OK',
     timeout: 20000,
     actionHandler: () => {
