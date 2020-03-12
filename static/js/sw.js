@@ -4,11 +4,11 @@
 
 const filesToPreCache = [
     // Web pages
-    { url: '/', revision: '2020-03-12-2' },
+    { url: '/', revision: '2020-03-12-3' },
     { url: '/acercade/', revision: '2019-05-28-1' },
     { url: '/direcciones/', revision: '2019-12-18-1' },
     { url: '/direcciones/googlemaps/', revision: '2019-05-28-1' },
-    { url: '/noticias/', revision: '2020-03-06-2' },
+    { url: '/noticias/', revision: '2020-03-12-3' },
     { url: '/politicaprivacidad/', revision: '2019-05-28-1' },
     { url: '/preguntasfrecuentes/', revision: '2019-05-28-1' },
     { url: '/servicios/', revision: '2019-05-28-1' },
@@ -59,7 +59,7 @@ workbox.core.clientsClaim();
 // Configuring Workbox
 workbox.core.setCacheNameDetails({
     prefix: 'cmh-pwa',
-    suffix: 'v2020-03-12-2',
+    suffix: 'v2020-03-12-3',
     precache: 'pre-cache',
     runtime: 'run-time',
     googleAnalytics: 'ga',
