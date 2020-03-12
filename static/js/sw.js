@@ -93,7 +93,7 @@ workbox.routing.registerRoute(
     new workbox.strategies.StaleWhileRevalidate({
         cacheName: 'cmh-pwa-img',
         plugins: [
-            new ExpirationPlugin({
+            new workbox.expiration.ExpirationPlugin({
                 // Keep at most 60 entries.
                 maxEntries: 60,
                 // Don't keep any entries for more than 30 days.
