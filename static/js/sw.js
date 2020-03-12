@@ -4,7 +4,7 @@
 
 const filesToPreCache = [
     // Web pages
-    { url: '/', revision: '2020-03-06-2' },
+    { url: '/', revision: '2020-03-12-1' },
     { url: '/acercade/', revision: '2019-05-28-1' },
     { url: '/direcciones/', revision: '2019-12-18-1' },
     { url: '/direcciones/googlemaps/', revision: '2019-05-28-1' },
@@ -45,17 +45,21 @@ const filesToPreCache = [
 ];
 
 // Importing Google's Workbox library for ServiceWorker implementation
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js');
 
 // Workbox Force Set Development/Production Builds 
 // Development = debug: true 
 // Production = debug: false
 workbox.setConfig({ debug: false });
 
+// Allows the ServiceWorker to update the app after user triggers refresh by updating it's lifecycle
+workbox.core.skipWaiting();
+workbox.core.clientsClaim();
+
 // Configuring Workbox
 workbox.core.setCacheNameDetails({
     prefix: 'cmh-pwa',
-    suffix: 'v2019-07-23-1',
+    suffix: 'v2020-03-12-1',
     precache: 'pre-cache',
     runtime: 'run-time',
     googleAnalytics: 'ga',
