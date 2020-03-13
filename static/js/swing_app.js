@@ -321,7 +321,7 @@ if (!isNull(document.querySelector('.s-mdc-image-list__image'))) {
 // It has been configured, through swing_main.py to make it look like it is.
 
 if ('serviceWorker' in navigator) {
-    const wb = new Workbox('/sw.js');
+    const wb = new Workbox('/sw.js', { scope: '/' });
     // Detects an update for the app's content and prompts user to refresh
     wb.addEventListener('installed', event => {
         if (event.isUpdate) {
