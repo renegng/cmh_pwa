@@ -14,6 +14,7 @@ import { MDCTabScroller } from '@material/tab-scroller';
 import { MDCTextField } from '@material/textfield';
 import { MDCTextFieldHelperText } from '@material/textfield/helper-text';
 import { MDCTopAppBar } from '@material/top-app-bar/index';
+import { Workbox } from 'workbox-window';
 import { isNull } from 'util';
 
 // Initialize AOS
@@ -320,17 +321,16 @@ if (!isNull(document.querySelector('.s-mdc-image-list__image'))) {
 // It has been configured, through swing_main.py to make it look like it is.
 
 if ('serviceWorker' in navigator) {
-    // Use the window load event to keep the page load performant
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js', { scope: '/' })
-            .then(reg => {
-                // registration worked
-                console.log('Service Worker Registered. Scope is ' + reg.scope);
-            }).catch(error => {
-                // registration failed
-                console.log('Service Worker Registration Failed with ' + error);
-            });
+    const wb = new Workbox('/sw.js');
+    // Detects an update for the app's content and prompts user to refresh
+    wb.addEventListener('installed', event => {
+        if (event.isUpdate) {
+            console.log('App update found...');
+            snackbar.show(updateSBDataObj);
+        }
     });
+    // Registers the Workbox Service Worker
+    wb.register();
 }
 
 // Add to Homescreen (A2H) Event
@@ -375,11 +375,6 @@ var updateSBDataObj = {
 window.addEventListener('appinstalled', (evt) => {
     console.log('App is installed...');
     appIsInstalled = true;
-
-    // Detects an update for the app's content and prompts user to refresh
-    if (evt.isUpdate) {
-        snackbar.show(updateSBDataObj);
-    }
 });
 
 window.addEventListener('beforeinstallprompt', (e) => {

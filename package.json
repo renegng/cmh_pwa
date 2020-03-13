@@ -33,6 +33,7 @@
   "dependencies": {
     "@material/tab-bar": "^0.41.0",
     "aos": "^2.3.3",
-    "material-components-web": "^0.36.1"
+    "material-components-web": "^0.36.1",
+    "workbox-window": "^5.0.0"
   }
 }

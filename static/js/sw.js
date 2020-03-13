@@ -59,7 +59,7 @@ workbox.core.clientsClaim();
 // Configuring Workbox
 workbox.core.setCacheNameDetails({
     prefix: 'cmh-pwa',
-    suffix: 'v2020-03-12-3',
+    suffix: 'v2020-03-13-1',
     precache: 'pre-cache',
     runtime: 'run-time',
     googleAnalytics: 'ga',
