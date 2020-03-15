@@ -321,7 +321,15 @@ if (!isNull(document.querySelector('.s-mdc-image-list__image'))) {
 // It has been configured, through swing_main.py to make it look like it is.
 
 if ('serviceWorker' in navigator) {
-    const wb = new Workbox('/sw.js', { scope: '/' });
+    var swURL = window.location.protocol + '//' + window.location.hostname;
+    if (window.location.port != '80' && window.location.port != '443')
+        swURL = swURL + ':' + window.location.port;
+    swURL = swURL + '/sw.js';
+
+    const wb = new Workbox(swURL, { scope: '/' });
+    console.log(swURL);
+    console.log(wb);
+    console.log("WBSW URL: " + wb._scriptURL);
     // Detects an update for the app's content and prompts user to refresh
     wb.addEventListener('installed', event => {
         if (event.isUpdate) {
