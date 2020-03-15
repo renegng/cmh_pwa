@@ -32,6 +32,7 @@ module.exports = [{
     entry: {
         // main: ["./static/js/swing_app.js"]
         main: [
+            "babel-polyfill",
             "./static/js/swing_app.js",
             "./instance/js/swing_firebase-api-key.js",
             "./static/js/swing_firebase.js",
@@ -50,7 +51,7 @@ module.exports = [{
             // exclude: /node_modules/,
             loader: 'babel-loader',
             query: {
-                presets: ['es2015', 'es2016', 'env']
+                presets: ['env']
             }
         }]
     },
