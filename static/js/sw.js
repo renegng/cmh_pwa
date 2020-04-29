@@ -4,11 +4,11 @@
 
 const filesToPreCache = [
     // Web pages
-    { url: '/', revision: '2020-04-28-1' },
+    { url: '/', revision: '2020-04-29-1' },
     { url: '/acercade/', revision: '2019-05-28-1' },
     { url: '/cmvirtual/', revision: '2020-04-28-1' },
     { url: '/cmvirtual/maa/', revision: '2020-04-28-1' },
-    { url: '/cmvirtual/maprodem/', revision: '2020-04-28-1' },
+    { url: '/cmvirtual/maprodem/', revision: '2020-04-29-1' },
     { url: '/direcciones/', revision: '2019-12-18-1' },
     { url: '/direcciones/googlemaps/', revision: '2019-05-28-1' },
     { url: '/noticias/', revision: '2020-03-17-1' },
