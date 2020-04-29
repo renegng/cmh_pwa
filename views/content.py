@@ -10,6 +10,18 @@ content = Blueprint('content', __name__, template_folder='templates', static_fol
 def _acercade():
     return render_template('acercade.html')
 
+@content.route('/cmvirtual/')
+def _cmvirtual():
+    return render_template('cmvirtual.html')
+
+@content.route('/cmvirtual/maa/')
+def _cmvirtual_maa():
+    return render_template('cmvirtual_maa.html')
+
+@content.route('/cmvirtual/maprodem/')
+def _cmvirtual_maprodem():
+    return render_template('cmvirtual_maprodem.html')
+
 @content.route('/direcciones/')
 def _direcciones():
     return render_template('direcciones.html')

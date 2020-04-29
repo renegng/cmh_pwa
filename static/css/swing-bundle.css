@@ -5089,6 +5089,10 @@ body {
   background-color: #ff9932;
   color: #ffffff; }
 
+.media-icon__backcolor-devices {
+  background-color: #7bdff2;
+  color: #ffffff; }
+
 .media-icon__backcolor-map {
   background-color: #8d6e63;
   color: #ffffff; }
