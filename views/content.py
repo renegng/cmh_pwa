@@ -18,6 +18,10 @@ def _cmvirtual():
 def _cmvirtual_maa():
     return render_template('cmvirtual_maa.html')
 
+@content.route('/cmvirtual/mae/')
+def _cmvirtual_mae():
+    return render_template('cmvirtual_mae.html')
+
 @content.route('/cmvirtual/maprodem/')
 def _cmvirtual_maprodem():
     return render_template('cmvirtual_maprodem.html')
