@@ -26,6 +26,10 @@ def _cmvirtual_mae():
 def _cmvirtual_maprodem():
     return render_template('cmvirtual_maprodem.html')
 
+@content.route('/cmvirtual/mssr/')
+def _cmvirtual_mssr():
+    return render_template('cmvirtual_mssr.html')
+
 @content.route('/direcciones/')
 def _direcciones():
     return render_template('direcciones.html')
