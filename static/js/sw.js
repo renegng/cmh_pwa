@@ -4,7 +4,7 @@
 
 const filesToPreCache = [
     // Web pages
-    { url: '/', revision: '2020-06-30-1' },
+    { url: '/', revision: '2020-07-01-1' },
     { url: '/acercade/', revision: '2019-05-28-1' },
     { url: '/boletines/', revision: '2020-06-30-1' },
     { url: '/cmvirtual/', revision: '2020-06-30-1' },
@@ -15,7 +15,7 @@ const filesToPreCache = [
     { url: '/cmvirtual/mssr/', revision: '2020-06-24-1' },
     { url: '/direcciones/', revision: '2019-12-18-1' },
     { url: '/direcciones/googlemaps/', revision: '2019-05-28-1' },
-    { url: '/noticias/', revision: '2020-06-24-1' },
+    { url: '/noticias/', revision: '2020-07-01-1' },
     { url: '/politicaprivacidad/', revision: '2019-05-28-1' },
     { url: '/preguntasfrecuentes/', revision: '2019-05-28-1' },
     { url: '/servicios/', revision: '2019-05-28-1' },
