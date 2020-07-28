@@ -34,6 +34,10 @@ def _cmvirtual_mai():
 def _cmvirtual_maprodem():
     return render_template('cmvirtual_maprodem.html')
 
+@content.route('/cmvirtual/mec/')
+def _cmvirtual_mec():
+    return render_template('cmvirtual_mec.html')
+
 @content.route('/cmvirtual/mssr/')
 def _cmvirtual_mssr():
     return render_template('cmvirtual_mssr.html')
