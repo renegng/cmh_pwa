@@ -4,16 +4,16 @@
 
 const filesToPreCache = [
     // Web pages
-    { url: '/', revision: '2020-09-08-1' },
+    { url: '/', revision: '2020-09-18-1' },
     { url: '/acercade/', revision: '2019-05-28-1' },
     { url: '/boletines/', revision: '2020-09-04-1' },
-    { url: '/cmvirtual/', revision: '2020-09-08-1' },
+    { url: '/cmvirtual/', revision: '2020-09-18-1' },
     { url: '/cmvirtual/maa/', revision: '2020-06-02-1' },
-    { url: '/cmvirtual/mae/', revision: '2020-09-08-1' },
+    { url: '/cmvirtual/mae/', revision: '2020-09-18-1' },
     { url: '/cmvirtual/mai/', revision: '2020-06-30-1' },
     { url: '/cmvirtual/maprodem/', revision: '2020-05-27-1' },
     { url: '/cmvirtual/mec/', revision: '2020-07-28-1' },
-    { url: '/cmvirtual/mssr/', revision: '2020-09-08-1' },
+    { url: '/cmvirtual/mssr/', revision: '2020-09-18-1' },
     { url: '/direcciones/', revision: '2019-12-18-1' },
     { url: '/direcciones/googlemaps/', revision: '2019-05-28-1' },
     { url: '/noticias/', revision: '2020-09-08-1' },
